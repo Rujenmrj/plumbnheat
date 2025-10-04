@@ -48,3 +48,11 @@
 }
 
 /* Rest of your base styles... */
+/* Hide scrollbars but allow scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
