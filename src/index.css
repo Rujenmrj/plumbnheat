@@ -26,6 +26,9 @@
   --color-gray-600: #4b4b4b;
   --color-gray-700: #2e2e2e;
 
+  --color-primary-faint: #f3f6fb; /* very light blue tint */
+  --color-gray-faint: #fafafa; /* very light gray */
+
   /* Typography */
   --font-family-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
 
