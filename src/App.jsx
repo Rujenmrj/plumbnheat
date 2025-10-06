@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/home";
+import AppRoutes from "./routes";
 
 const App = () => {
   return (
@@ -9,7 +10,7 @@ const App = () => {
       <Navbar />
       {/* Full-width page content */}
       <main className="flex-1">
-        <Home />
+        <AppRoutes />
       </main>
       <Footer />
     </div>
