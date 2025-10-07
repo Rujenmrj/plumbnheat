@@ -30,19 +30,22 @@ const features = [
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-26 bg-white">
+    <section className="pt-20 pb-26 bg-white">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-primary-500 mb-15 leading-tight">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-primary-500)] mb-4 leading-tight">
           Why Choose Us
         </h2>
+        <p className="text-gray-600 text-lg mb-12">
+          Here’s why homeowners across <span className="text-[var(--color-secondary-500)] font-semibold">Aldershot, Hampshire</span> choose us.
+        </p>
 
         <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory md:grid md:grid-cols-5 md:overflow-visible md:gap-8 scrollbar-hide">
           {features.map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="bg-white rounded-xl p-8 shadow-md flex flex-col items-center text-center min-w-[200px] md:min-w-0 hover:shadow-lg transition-all duration-200 snap-start"
+              className="bg-white rounded-xl p-8 shadow-md flex flex-col items-center text-center min-w-[220px] md:min-w-0 hover:shadow-lg transition-all duration-200 snap-start"
             >
-              <div className="bg-[#f24e4b] text-white w-12 h-12 mb-3 flex items-center justify-center rounded-full">
+              <div className="bg-[var(--color-secondary-500)] text-white w-12 h-12 mb-3 flex items-center justify-center rounded-full">
                 <Icon className="w-6 h-6" />
               </div>
               <h4 className="font-semibold mb-2 text-[#2e2e2e]">{title}</h4>

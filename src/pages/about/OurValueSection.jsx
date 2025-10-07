@@ -25,7 +25,7 @@ const OurValuesSection = () => {
   ];
 
   return (
-    <section className="bg-primary-100 py-26">
+    <section className="bg-primary-100 pt-20 pb-26 mt-15">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-primary-500 mb-15 leading-tight">
           Our Values

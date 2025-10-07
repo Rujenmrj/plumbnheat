@@ -2,7 +2,7 @@ import React from "react";
 
 const OurStorySection = () => {
   return (
-    <section className="bg-white w-full h-auto flex items-center">
+    <section className="bg-gray-faint w-full h-auto flex items-center">
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10 w-full">
         {/* Left Side - Text */}
         <div className="flex-1 text-center md:text-left">
@@ -23,7 +23,7 @@ const OurStorySection = () => {
         {/* Right Side - Image */}
         <div className="flex-1 flex justify-center">
           <img
-            src="/image.jpg"
+            src="/about/story.jpg"
             alt="image"
             className="w-full max-w-md rounded-xl shadow-lg"
           />
