@@ -30,7 +30,7 @@ export default function Navbar() {
               Contact
             </Link>
             <button className="ml-4 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition">
-              Get Started
+              Get In Touch
             </button>
           </div>
 
