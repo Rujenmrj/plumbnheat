@@ -1,5 +1,6 @@
 // src/components/Navbar.jsx
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,18 +16,19 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 items-center">
-            <a href="#" className="hover:text-primary-300 transition-colors">
+            
+            <Link to="/" className="hover:text-primary-300 transition-colors">
               Home
-            </a>
-            <a href="#" className="hover:text-primary-300 transition-colors">
+            </Link>
+            <Link to="/services" className="hover:text-primary-300 transition-colors">
               Services
-            </a>
-            <a href="#" className="hover:text-primary-300 transition-colors">
+            </Link>
+            <Link to="/about" className="hover:text-primary-300 transition-colors">
               About
-            </a>
-            <a href="#" className="hover:text-primary-300 transition-colors">
+            </Link>
+            <Link to="/contact" className="hover:text-primary-300 transition-colors">
               Contact
-            </a>
+            </Link>
             <button className="ml-4 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition">
               Get In Touch
             </button>
@@ -81,12 +83,9 @@ export default function Navbar() {
           >
             Services
           </a>
-          <a
-            href="#"
-            className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
-          >
+          <Link to="/about" className="block px-3 py-2 rounded-md hover:bg-primary-100 transition">
             About
-          </a>
+          </Link>
           <a
             href="#"
             className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
