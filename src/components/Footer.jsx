@@ -26,7 +26,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center mt-6 text-sm text-gray-300">
           <p>&copy; 2025 PlumbNHeat. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
-            <a href="#" className="hover:text-secondary-300 transition-colors">
+            <a
+              href="/privacy-policy"
+              className="hover:text-secondary-300 transition-colors"
+            >
               Privacy Policy
             </a>
             <a href="#" className="hover:text-secondary-300 transition-colors">
