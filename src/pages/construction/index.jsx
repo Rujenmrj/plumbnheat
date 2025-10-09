@@ -1,5 +1,7 @@
+import Banner from "../../components/Banner.jsx";
+import FAQSection from "../../components/FAQSection.jsx";
 import AboutConstruction from "./AboutConstruction";
-import CoverageArea from "./CoverageArea.jsx";
+import CoverageArea from "./AreasWeCover.jsx";
 import CTASection from "./CTASection";
 import HeroConstruction from "./HeroConstruction";
 import ServicePromise from "./ServicePromise";
@@ -11,11 +13,11 @@ export default function ConstructionPage() {
     <div className="w-full flex flex-col items-center">
       <HeroConstruction />
       <AboutConstruction />
-      <ServicesGrid />
-      <ServicePromise />
-      <WhyChooseUs />
       <CoverageArea />
-      <CTASection />
+      <ServicesGrid />
+      {/* <ServicePromise /> */}
+      <WhyChooseUs />
+      <FAQSection />
     </div>
   );
 }
