@@ -16,7 +16,7 @@ export default function Footer() {
             <a href="#" className="hover:text-secondary-300 transition-colors">
               About
             </a>
-            <a href="#" className="hover:text-secondary-300 transition-colors">
+            <a href="/contact" className="hover:text-secondary-300 transition-colors">
               Contact
             </a>
           </nav>
