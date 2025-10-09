@@ -6,6 +6,7 @@ import WhyChooseUsSection from "./WhyChooseUsSection";
 import Testimonial from "./Testimonial";
 import ContactUs from "../home/ContactUs";
 import Banner from "../../components/Banner";
+import FAQSection from "../../components/FAQSection"
 
 const About = () => {
   return (
@@ -17,6 +18,7 @@ const About = () => {
       <WhyChooseUsSection />
       <Testimonial />
       <ContactUs />
+      <FAQSection />
     </div>
   );
 };
