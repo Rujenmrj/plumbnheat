@@ -12,7 +12,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src="/wph-logo-1.png" alt="logo" className="h-10 w-auto" />
+            <img src="/logohalf.svg" alt="logo" className="h-10 w-auto md:h-12" />
           </div>
 
           {/* Desktop Menu */}
