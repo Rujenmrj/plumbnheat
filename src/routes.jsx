@@ -3,6 +3,7 @@ import Home from "./pages/home";
 import About from "./pages/about";
 import PrivacyPolicy from "./pages/privacy-policy/index.js";
 import NotFound from "./pages/not-found/NotFound";
+import Contact from "./pages/contact-page/index.jsx";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -10,6 +11,9 @@ const AppRoutes = () => {
       <Route path="/about" element={<About />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       {/* 404 Catch-all route */}
+
+<Route path="/contact" element={<Contact />} />
+
       <Route path="*" element={<NotFound />} /> {/* ✅ Works now */}
     </Routes>
   );
