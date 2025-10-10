@@ -2,12 +2,38 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WPH</title>
+
+    <!-- Favicon SVG (modern browsers) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+
+    <!-- PNG fallback (most browsers) -->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+
+    <!-- ICO fallback -->
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+    <!-- Apple touch icon (iOS devices) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+
+    <!-- Web manifest for Android / PWA support -->
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+
+    <!-- Android app icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/web-app-manifest-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon/web-app-manifest-512x512.png" />
+
+    <!-- Safari pinned tab -->
+    <link rel="mask-icon" href="/favicon/favicon.svg" color="#5bbad5" />
+
+    <!-- Windows tile color -->
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
