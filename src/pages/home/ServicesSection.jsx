@@ -1,6 +1,9 @@
 import React from "react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation"
 
 export default function ServicesSection() {
+  const [ref, isVisible] = useScrollAnimation(0.15);
+
   const services = [
     {
       title: "Plumbing Repairs",
@@ -23,10 +26,13 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section className="bg-white w-full py-20">
+    <section className="bg-white w-full py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-12">
+        <div ref={ref}
+          className={`text-center mb-12 transition-all duration-700 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}>
           <h2 className="text-4xl font-bold text-primary-600 mb-4">
             Our Services
           </h2>
@@ -42,6 +48,11 @@ export default function ServicesSection() {
             <div
               key={index}
               className="bg-primary-100 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1"
+              style={{
+                transitionDelay: isVisible ? `${index * 150}ms` : '0ms',
+                opacity: isVisible ? 1 : 0,
+                transform: isVisible ? 'translateY(0)' : 'translateY(30px)'
+              }}
             >
               <img
                 src={service.image}
