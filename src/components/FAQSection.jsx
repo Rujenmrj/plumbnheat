@@ -1,8 +1,11 @@
 import React from "react";
 import Accordion from "./Accordion";
 import { Plus } from "lucide-react";
+import { useScrollAnimation } from "../components/hooks/useScrollAnimation";
 
 const FAQSection = () => {
+  const [ref, isVisible] = useScrollAnimation(0.1);
+
   const faqs = [
     {
       question: "Do you offer emergency plumbing services?",
@@ -32,8 +35,13 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="w-full bg-[var(--color-gray-faint)] py-16 px-6 flex flex-col items-center text-center">
-      <div className="max-w-[800px] w-full">
+    <section className="w-full bg-[#f3f6fb] py-16 px-6 flex flex-col items-center text-center overflow-hidden">
+      <div
+        ref={ref}
+        className={`max-w-[800px] w-full transition-all duration-700 ${
+          isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
         <h2 className="text-3xl font-bold text-[var(--color-primary-600)] mb-4">
           Frequently Asked Questions
         </h2>
