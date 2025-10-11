@@ -1,18 +1,77 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Wrench,
-  Hammer,
-  Flame,
-  Droplet,
-} from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown, Flame, Droplet, Hammer } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [underlineStyle, setUnderlineStyle] = useState({});
+  const [activeUnderlineStyle, setActiveUnderlineStyle] = useState({});
+  const [isHovering, setIsHovering] = useState(false);
+  const location = useLocation();
+  const menuRefs = useRef({});
+  const dropdownTimeoutRef = useRef(null);
+
+  const links = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services", isDropdown: true },
+  ];
+
+  const dropdownLinks = [
+    { icon: Flame, label: "Heating", to: "/services/heating" },
+    { icon: Droplet, label: "Plumbing", to: "/services/plumbing" },
+    { icon: Hammer, label: "Construction", to: "/services/construction" },
+  ];
+
+  // Update underline based on active route
+  useEffect(() => {
+    const activePath = location.pathname.startsWith("/services")
+      ? "/services"
+      : location.pathname;
+
+    const activeEl = menuRefs.current[activePath];
+    if (activeEl) {
+      const style = {
+        left: activeEl.offsetLeft,
+        width: activeEl.offsetWidth,
+      };
+      setActiveUnderlineStyle(style);
+      if (!isHovering) {
+        setUnderlineStyle(style);
+      }
+    }
+  }, [location, isHovering]);
+
+  const handleHover = (path) => {
+    setIsHovering(true);
+    const el = menuRefs.current[path];
+    if (el) {
+      setUnderlineStyle({
+        left: el.offsetLeft,
+        width: el.offsetWidth,
+      });
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    // Return underline to active page
+    setUnderlineStyle(activeUnderlineStyle);
+  };
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    setShowDropdown(true);
+  };
+
+  const handleDropdownLeave = () => {
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setShowDropdown(false);
+    }, 150);
+  };
 
   return (
     <nav className="w-full bg-white text-primary-500 shadow-md sticky top-0 z-50">
@@ -21,7 +80,6 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/">
-              {" "}
               <img
                 src="/logohalf.svg"
                 alt="logo"
@@ -31,75 +89,73 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8 items-center">
-            <Link to="/" className="hover:text-primary-300 transition-colors">
-              Home
-            </Link>
-
-            {/* Services Dropdown */}
+          <div className="hidden md:flex space-x-8 items-center relative">
             <div
-              className="relative"
-              onMouseEnter={() => setShowDropdown(true)}
-              onMouseLeave={() => setShowDropdown(false)}
+              className="flex space-x-8 items-center relative"
+              onMouseLeave={handleMouseLeave}
             >
-              <button
-                className="hover:text-primary-300 transition-colors flex items-center gap-1"
-                aria-expanded={showDropdown}
-              >
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4 mt-[2px]" />
-              </button>
+              {/* Single underline */}
+              <span
+                className="absolute bottom-[-8px] h-[3px] bg-secondary-500 transition-all duration-300 ease-out"
+                style={underlineStyle}
+              />
 
-              {/* Dropdown Menu */}
-              <div
-                className={`absolute left-0 top-full w-64 bg-white rounded-lg shadow-lg py-2 border border-gray-100 transition-all duration-150 z-50 ${
-                  showDropdown
-                    ? "opacity-100 translate-y-1 visible"
-                    : "opacity-0 -translate-y-2 invisible"
-                }`}
-                style={{ marginTop: "-2px" }}
-              >
-                <Link
-                  to="/services/heating"
-                  className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
+              {links.map((link) => (
+                <div
+                  key={link.name}
+                  ref={(el) => (menuRefs.current[link.path] = el)}
+                  className="relative flex items-center cursor-pointer"
+                  onMouseEnter={() => handleHover(link.path)}
                 >
-                  <Flame className="w-8 h-8 mr-3" />
-                  <span>Heating</span>
-                </Link>
+                  {link.isDropdown ? (
+                    <div
+                      onMouseEnter={handleDropdownEnter}
+                      onMouseLeave={handleDropdownLeave}
+                    >
+                      <button className="flex items-center gap-1 hover:text-primary-300 transition-colors">
+                        <span>Services</span>
+                        <ChevronDown className="w-4 h-4 mt-[2px]" />
+                      </button>
 
-                <Link
-                  to="/services/plumbing"
-                  className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
-                >
-                  <Droplet className="w-8 h-8 mr-3" />
-                  <span>Plumbing</span>
-                </Link>
-
-                <Link
-                  to="/services/construction"
-                  className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
-                >
-                  <Hammer className="w-8 h-8 mr-3" />
-                  <span>Construction</span>
-                </Link>
-              </div>
+                      {/* Dropdown */}
+                      {showDropdown && (
+                        <div
+                          className="absolute top-full mt-2 left-0 w-64 bg-white rounded-lg shadow-lg py-2 border border-gray-100 z-50"
+                          onMouseEnter={handleDropdownEnter}
+                          onMouseLeave={handleDropdownLeave}
+                        >
+                          {dropdownLinks.map(({ icon: Icon, label, to }) => (
+                            <Link
+                              key={label}
+                              to={to}
+                              className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
+                              onClick={() => setShowDropdown(false)}
+                            >
+                              <Icon className="w-8 h-8 mr-3" />
+                              <span>{label}</span>
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <Link
+                      to={link.path}
+                      className="hover:text-primary-300 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
 
             <Link
-              to="/about"
-              className="hover:text-primary-300 transition-colors"
+              to="/contact"
+              className="ml-4 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition"
             >
-              About
+              Get in Touch
             </Link>
-
-            <button className="ml-4 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition">
-              <Link
-                to="/contact"
-                className="hover:text-primary-300 transition-colors"
-              >
-                Get in Touch
-              </Link>
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -125,6 +181,7 @@ export default function Navbar() {
           <Link
             to="/"
             className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
+            onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
@@ -135,29 +192,29 @@ export default function Navbar() {
               className="w-full flex items-center justify-between px-3 py-2"
             >
               <span className="font-medium">Services</span>
-              <ChevronDown className="w-5 h-5" />
+              <ChevronDown
+                className={`w-5 h-5 transition-transform ${
+                  showDropdown ? "rotate-180" : ""
+                }`}
+              />
             </button>
 
             {showDropdown && (
               <div className="ml-4">
-                <Link
-                  to="/services/heating"
-                  className="block px-3 py-1 hover:bg-primary-100 rounded-md"
-                >
-                  Heating
-                </Link>
-                <Link
-                  to="/services/plumbing"
-                  className="block px-3 py-1 hover:bg-primary-100 rounded-md"
-                >
-                  Plumbing
-                </Link>
-                <Link
-                  to="/services/construction"
-                  className="block px-3 py-1 hover:bg-primary-100 rounded-md"
-                >
-                  Construction
-                </Link>
+                {dropdownLinks.map(({ icon: Icon, label, to }) => (
+                  <Link
+                    key={label}
+                    to={to}
+                    className="flex items-center gap-2 px-3 py-2 rounded-md hover:bg-primary-100 transition"
+                    onClick={() => {
+                      setShowDropdown(false);
+                      setIsOpen(false);
+                    }}
+                  >
+                    <Icon className="w-5 h-5" />
+                    <span>{label}</span>
+                  </Link>
+                ))}
               </div>
             )}
           </div>
@@ -165,18 +222,18 @@ export default function Navbar() {
           <Link
             to="/about"
             className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
+            onClick={() => setIsOpen(false)}
           >
             About
           </Link>
 
-          <button className="w-full mt-2 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition">
-            <Link
-              to="/contact"
-              className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
-            >
-              Get in Touch
-            </Link>
-          </button>
+          <Link
+            to="/contact"
+            className="block mx-3 mt-2 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition text-center"
+            onClick={() => setIsOpen(false)}
+          >
+            Get in Touch
+          </Link>
         </div>
       )}
     </nav>
