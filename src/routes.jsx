@@ -6,8 +6,8 @@ import NotFound from "./pages/not-found/NotFound";
 import Contact from "./pages/contact-page/index.jsx";
 import TermsOfService from "./pages/term-of-service/index.jsx";
 import ConstructionPage from "./pages/construction/index.jsx";
-import ScrollToTop from "./components/ui/ScrollToTop.jsx";
 import Heating from "./pages/heating/index.jsx";
+import Plumbing from "./pages/plumbing/index.jsx";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -17,6 +17,7 @@ const AppRoutes = () => {
       <Route path="/terms-of-service" element={<TermsOfService />} />
       <Route path="/services/construction" element={<ConstructionPage />} />
       <Route path="/services/heating" element={<Heating />} />
+      <Route path="/services/plumbing" element={<Plumbing />} />
       {/* 404 Catch-all route */}
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} /> {/* ✅ Works now */}

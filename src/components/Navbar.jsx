@@ -20,11 +20,14 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img
-              src="/logohalf.svg"
-              alt="logo"
-              className="h-10 w-auto md:h-12"
-            />
+            <Link to="/">
+              {" "}
+              <img
+                src="/logohalf.svg"
+                alt="logo"
+                className="h-10 w-auto md:h-12"
+              />
+            </Link>
           </div>
 
           {/* Desktop Menu */}
@@ -88,14 +91,14 @@ export default function Navbar() {
             >
               About
             </Link>
-            <Link
-              to="/contact"
-              className="hover:text-primary-300 transition-colors"
-            >
-              Contact
-            </Link>
+
             <button className="ml-4 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition">
-              Get In Touch
+              <Link
+                to="/contact"
+                className="hover:text-primary-300 transition-colors"
+              >
+                Get in Touch
+              </Link>
             </button>
           </div>
 
@@ -165,14 +168,14 @@ export default function Navbar() {
           >
             About
           </Link>
-          <Link
-            to="/contact"
-            className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
-          >
-            Contact
-          </Link>
+
           <button className="w-full mt-2 px-4 py-2 rounded-lg bg-secondary-500 text-white hover:bg-secondary-400 transition">
-            Get Started
+            <Link
+              to="/contact"
+              className="block px-3 py-2 rounded-md hover:bg-primary-100 transition"
+            >
+              Get in Touch
+            </Link>
           </button>
         </div>
       )}
