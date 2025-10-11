@@ -1,4 +1,5 @@
 import ImageSlider from "../../components/ImageSlider";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation"; 
 
 const slides = [
   {
@@ -21,11 +22,14 @@ const slides = [
   },
 ];
 
-const HeroSection = () => (
-  <section className="bg-primary-100 w-full">
-    <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
-      <div className="flex-1 text-center md:text-left">
-        <h1 className="text-4xl sm:text-5xl font-bold text-primary-600 mb-6 leading-tight">
+export default function HeroSection() {
+  const [ref, isVisible] = useScrollAnimation(0.2);
+
+  return (
+    <section className="bg-primary-100 w-full">
+      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary-600 mb-6 leading-tight">
           Reliable Plumbing & Heating Solutions
         </h1>
         <p className="text-gray-600 text-lg mb-8 max-w-lg">
@@ -55,5 +59,4 @@ const HeroSection = () => (
     </div>
   </section>
 );
-
-export default HeroSection;
+}
