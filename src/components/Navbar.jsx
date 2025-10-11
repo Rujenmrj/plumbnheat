@@ -1,6 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Wrench, Hammer } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Wrench,
+  Hammer,
+  Flame,
+  Droplet,
+} from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +20,11 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src="/logohalf.svg" alt="logo" className="h-10 w-auto md:h-12" />
+            <img
+              src="/logohalf.svg"
+              alt="logo"
+              className="h-10 w-auto md:h-12"
+            />
           </div>
 
           {/* Desktop Menu */}
@@ -42,16 +54,24 @@ export default function Navbar() {
                     ? "opacity-100 translate-y-1 visible"
                     : "opacity-0 -translate-y-2 invisible"
                 }`}
-                // Ensure small overlap to prevent hover gap
                 style={{ marginTop: "-2px" }}
               >
                 <Link
-                  to="/services/heating-plumbing"
+                  to="/services/heating"
                   className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
                 >
-                  <Wrench className="w-8 h-8 mr-3" />
-                  <span>Heating & Plumbing</span>
+                  <Flame className="w-8 h-8 mr-3" />
+                  <span>Heating</span>
                 </Link>
+
+                <Link
+                  to="/services/plumbing"
+                  className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
+                >
+                  <Droplet className="w-8 h-8 mr-3" />
+                  <span>Plumbing</span>
+                </Link>
+
                 <Link
                   to="/services/construction"
                   className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
@@ -118,10 +138,16 @@ export default function Navbar() {
             {showDropdown && (
               <div className="ml-4">
                 <Link
-                  to="/services/heating-plumbing"
+                  to="/services/heating"
                   className="block px-3 py-1 hover:bg-primary-100 rounded-md"
                 >
-                  Heating & Plumbing
+                  Heating
+                </Link>
+                <Link
+                  to="/services/plumbing"
+                  className="block px-3 py-1 hover:bg-primary-100 rounded-md"
+                >
+                  Plumbing
                 </Link>
                 <Link
                   to="/services/construction"
