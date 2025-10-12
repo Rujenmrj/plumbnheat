@@ -1,10 +1,19 @@
 import React from "react";
+import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 const AboutSection = () => {
+  const [heroRef, heroVisible] = useScrollAnimation(0.1);
+  const [textRef, textVisible] = useScrollAnimation(0.1);
+
   return (
     <section className="relative w-full overflow-hidden">
       {/* ===== HERO SECTION ===== */}
-      <div className="relative w-full h-[50vh]">
+      <div 
+        ref={heroRef}
+        className={`relative w-full h-[50vh] transition-all duration-1000 ${
+          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         {/* Image container */}
         <div className="relative w-full h-full">
           <img
@@ -31,7 +40,12 @@ const AboutSection = () => {
       </div>
 
       {/* ===== WHO WE ARE SECTION ===== */}
-      <div className="w-full py-12 px-4 sm:px-6 text-center bg-[#edf1f7]">
+      <div 
+        ref={textRef}
+        className={`w-full py-12 px-4 sm:px-6 text-center bg-[#edf1f7] transition-all duration-1000 delay-200 ${
+          textVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[var(--color-primary-500)] mb-3">
             Who We Are
@@ -44,7 +58,7 @@ const AboutSection = () => {
               {" "}
               WE PLUMB N HEAT{" "}
             </span>
-            , we’re passionate about keeping homes and businesses safe,
+            , we're passionate about keeping homes and businesses safe,
             comfortable, and fully functional. Our skilled team of plumbers,
             heating engineers, and construction professionals brings years of
             experience and a reputation built on reliability, honesty, and
@@ -52,7 +66,7 @@ const AboutSection = () => {
           </p>
 
           <p className="text-gray-800 text-base sm:text-lg leading-relaxed mt-4 px-1">
-            Whether it’s a small repair or a complete installation, we treat
+            Whether it's a small repair or a complete installation, we treat
             every project with care and precision — ensuring lasting results and
             genuine customer satisfaction.
           </p>

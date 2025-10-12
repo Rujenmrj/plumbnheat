@@ -1,9 +1,17 @@
 import React from "react";
+import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 const OurStorySection = () => {
+  const [sectionRef, sectionVisible] = useScrollAnimation(0.1);
+
   return (
     <section className="bg-gray-faint w-full h-auto flex items-center">
-      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10 w-full">
+      <div 
+        ref={sectionRef}
+        className={`max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10 w-full transition-all duration-1000 ${
+          sectionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         {/* Left Side - Text */}
         <div className="flex-1 text-center md:text-left">
           <h2 className="text-4xl sm:text-5xl font-bold text-primary-500 mb-6 leading-tight">
