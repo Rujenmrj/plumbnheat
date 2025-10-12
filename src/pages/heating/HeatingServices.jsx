@@ -8,8 +8,11 @@ import {
   CheckCircle,
   TrendingDown,
 } from "lucide-react";
+import { useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 export default function HeatingServices() {
+  const [ref, isVisible] = useScrollAnimation(0.1);
+
   const services = [
     {
       icon: <Flame className="w-12 h-12" />,
@@ -104,7 +107,12 @@ export default function HeatingServices() {
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-b from-white to-primary-faint w-full">
+<div
+      ref={ref}
+      className={`py-20 bg-gradient-to-b from-white to-primary-faint w-full transition-all duration-700 ease-out ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
