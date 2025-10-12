@@ -1,6 +1,10 @@
 import { Home, Droplet, Wrench, Clock, Award, Building } from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function ServicesGrid() {
+  const [titleRef, titleVisible] = useScrollAnimation(0.1);
+  const [gridRef, gridVisible] = useScrollAnimation(0.1);
+
   const services = [
     {
       // icon: <Home className="w-12 h-12" />,
@@ -58,10 +62,15 @@ export default function ServicesGrid() {
     },
   ];
 
-  return (
+   return (
     <div className="py-20 bg-gray-faint w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
             Our Services
           </h2>
@@ -72,7 +81,12 @@ export default function ServicesGrid() {
         </div>
 
         {/* Desktop/Tablet: Grid Layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={gridRef}
+          className={`hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
+            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {services.map((service, index) => (
             <div
               key={index}
@@ -86,11 +100,6 @@ export default function ServicesGrid() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div
-                  className={`absolute top-4 right-4 w-14 h-14 rounded-xl flex items-center justify-center text-white shadow-lg`}
-                >
-                  {service.icon}
-                </div>
               </div>
 
               {/* Content Section */}
@@ -146,3 +155,5 @@ export default function ServicesGrid() {
     </div>
   );
 }
+
+

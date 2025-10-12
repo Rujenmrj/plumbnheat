@@ -1,6 +1,12 @@
 import { CheckCircle, Phone } from "lucide-react";
+import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 export default function WhyChooseUs() {
+
+  const [leftRef, leftVisible] = useScrollAnimation(0.1);
+  const [rightRef, rightVisible] = useScrollAnimation(0.1);
+
+
   const reasons = [
     "Licensed and fully insured professionals",
     "20+ years of combined experience",
@@ -14,7 +20,12 @@ export default function WhyChooseUs() {
     <div className="py-20 bg-primary-faint w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <div 
+            ref={leftRef}
+            className={`transition-all duration-1000 ${
+              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6">
               Why Choose Us?
             </h2>
@@ -33,7 +44,12 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          <div className="relative">
+          <div 
+            ref={rightRef}
+            className={`relative transition-all duration-1000 delay-200 ${
+              rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl p-8 text-white shadow-2xl transform rotate-2">
               <div className="transform -rotate-2">
                 <div className="text-6xl font-bold mb-4">24/7</div>
