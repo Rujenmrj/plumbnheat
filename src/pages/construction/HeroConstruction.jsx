@@ -15,10 +15,13 @@ import {
 } from "lucide-react";
 import { use } from "react";
 import { useNavigate } from "react-router-dom";
+import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 export default function Hero() {
   const navigate = useNavigate();
-  return (
+  const [heroRef, heroVisible] = useScrollAnimation(0.1);
+
+ return (
     <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 text-white overflow-hidden w-full">
       <div className="absolute inset-0 opacity-10">
         <div
@@ -29,7 +32,12 @@ export default function Hero() {
         ></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div 
+        ref={heroRef}
+        className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 transition-all duration-1000 ${
+          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             Building Excellence,

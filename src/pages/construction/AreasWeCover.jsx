@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { MapPin, CheckCircle } from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function AreasWeCover() {
   const [position, setPosition] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [titleRef, titleVisible] = useScrollAnimation(0.1);
+  const [contentRef, contentVisible] = useScrollAnimation(0.1);
 
   // Animate walking person
   useEffect(() => {
@@ -52,7 +55,12 @@ export default function AreasWeCover() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Areas We Cover
           </h2>
@@ -62,7 +70,12 @@ export default function AreasWeCover() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div 
+          ref={contentRef}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-all duration-1000 delay-200 ${
+            contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {/* Animated section */}
           <div className="relative h-96 bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl">
             <div className="absolute inset-0 overflow-hidden rounded-3xl">
@@ -214,11 +227,6 @@ export default function AreasWeCover() {
                 <MapPin className="w-8 h-8 text-secondary-300 fill-secondary-500" />
               </div>
             </div>
-
-            {/* Text overlay */}
-            {/* <div className="absolute top-8 left-8 bg-secondary-500 text-white px-4 py-2 rounded-lg font-semibold shadow-lg">
-              On Our Way! 🚀
-            </div> */}
           </div>
 
           {/* Areas list */}
@@ -256,3 +264,5 @@ export default function AreasWeCover() {
     </div>
   );
 }
+
+
