@@ -1,6 +1,13 @@
 import { Shield, Award, CheckCircle, FileCheck } from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function GasSafeCertification() {
+
+  const [titleRef, titleVisible] = useScrollAnimation(0.1);
+  const [gridRef, gridVisible] = useScrollAnimation(0.1);
+  const [mainCardRef, mainCardVisible] = useScrollAnimation(0.1);
+  const [statsRef, statsVisible] = useScrollAnimation(0.1);
+
   const certifications = [
     {
       icon: <Shield className="w-8 h-8" />,
@@ -32,11 +39,16 @@ export default function GasSafeCertification() {
     },
   ];
 
-  return (
+ return (
     <div className="py-20 bg-white w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-600 rounded-full px-6 py-3 mb-6 font-bold text-sm">
             <Shield className="w-5 h-5" />
             CERTIFIED & QUALIFIED
@@ -51,7 +63,12 @@ export default function GasSafeCertification() {
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div 
+          ref={gridRef}
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 transition-all duration-1000 delay-200 ${
+            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -74,7 +91,12 @@ export default function GasSafeCertification() {
         </div>
 
         {/* Large Gas Safe Logo Section */}
-        <div className="bg-gradient-to-br from-primary-600 to-primary-700 rounded-3xl p-10 md:p-16 text-white shadow-2xl">
+        <div 
+          ref={mainCardRef}
+          className={`bg-gradient-to-br from-primary-600 to-primary-700 rounded-3xl p-10 md:p-16 text-white shadow-2xl transition-all duration-1000 delay-300 ${
+            mainCardVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div>
               <h3 className="text-3xl md:text-4xl font-bold mb-4">
@@ -134,7 +156,12 @@ export default function GasSafeCertification() {
         </div>
 
         {/* Bottom Trust Indicators */}
-        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div 
+          ref={statsRef}
+          className={`mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center transition-all duration-1000 delay-400 ${
+            statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="bg-primary-faint rounded-xl p-6">
             <div className="text-secondary-600 font-bold text-3xl mb-2">
               100%

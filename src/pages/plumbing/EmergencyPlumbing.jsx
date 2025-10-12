@@ -7,8 +7,12 @@ import {
   CheckCircle,
   Droplets,
 } from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function EmergencyPlumbing() {
+  const [leftRef, leftVisible] = useScrollAnimation(0.1);
+  const [rightRef, rightVisible] = useScrollAnimation(0.1);
+
   const emergencies = [
     {
       icon: <Droplets className="w-8 h-8" />,
@@ -40,7 +44,7 @@ export default function EmergencyPlumbing() {
     },
   ];
 
-  return (
+ return (
     <div className="py-20 bg-gradient-to-br from-primary-600 to-primary-700 text-white w-full relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -55,7 +59,12 @@ export default function EmergencyPlumbing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Emergency info */}
-          <div>
+          <div 
+            ref={leftRef}
+            className={`transition-all duration-1000 ${
+              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <Clock className="w-5 h-5" />
               <span className="font-semibold text-sm">AVAILABLE 24/7/365</span>
@@ -135,7 +144,12 @@ export default function EmergencyPlumbing() {
           </div>
 
           {/* Right side - Emergency types */}
-          <div>
+          <div 
+            ref={rightRef}
+            className={`transition-all duration-1000 delay-200 ${
+              rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {emergencies.map((emergency, index) => (
                 <div

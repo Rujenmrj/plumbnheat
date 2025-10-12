@@ -8,8 +8,14 @@ import {
   Clock,
   ShowerHeadIcon,
 } from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation"; 
 
 export default function PlumbingServices() {
+
+  const [titleRef, titleVisible] = useScrollAnimation(0.1);
+  const [gridRef, gridVisible] = useScrollAnimation(0.1);
+  const [ctaRef, ctaVisible] = useScrollAnimation(0.1);
+
   const services = [
     {
       icon: <Droplets className="w-12 h-12" />,
@@ -103,11 +109,16 @@ export default function PlumbingServices() {
     },
   ];
 
-  return (
+ return (
     <div className="py-20 bg-gradient-to-b from-white to-primary-faint w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div 
+          ref={titleRef}
+          className={`text-center mb-16 transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="inline-block bg-primary-100 text-primary-600 rounded-full px-4 py-2 mb-4 font-semibold text-sm">
             PLUMBING SOLUTIONS
           </div>
@@ -121,7 +132,12 @@ export default function PlumbingServices() {
         </div>
 
         {/* Desktop/Tablet: Grid Layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+          ref={gridRef}
+          className={`hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
+            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {services.map((service, index) => (
             <div
               key={index}
@@ -230,7 +246,12 @@ export default function PlumbingServices() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-16 text-center bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-10 text-white shadow-2xl">
+        <div 
+          ref={ctaRef}
+          className={`mt-16 text-center bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-10 text-white shadow-2xl transition-all duration-1000 delay-300 ${
+            ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h3 className="text-3xl font-bold mb-4">Need a Plumber Today?</h3>
           <p className="text-xl text-primary-100 mb-6">
             Fast, reliable plumbing services across Aldershot and surrounding
@@ -249,4 +270,5 @@ export default function PlumbingServices() {
       </div>
     </div>
   );
+
 }

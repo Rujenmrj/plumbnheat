@@ -1,7 +1,10 @@
 import { Droplets, Wrench, Phone, Clock, Shield, Zap } from "lucide-react";
+import { useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 export default function HeroSection() {
-  return (
+  const [heroRef, heroVisible] = useScrollAnimation(0.1);
+
+ return (
     <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 text-white overflow-hidden w-full">
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -35,7 +38,12 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div 
+        ref={heroRef}
+        className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 transition-all duration-1000 ${
+          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        }`}
+      >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
