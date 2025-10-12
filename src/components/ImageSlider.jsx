@@ -138,9 +138,9 @@ const ImageSlider = ({ slides }) => {
                 <img
                   src={slide.image}
                   alt={slide.alt || `Slide ${(index % totalSlides) + 1}`}
-                  className="w-full h-64 sm:h-80 object-cover"
+                  className="w-full h-[30rem] sm:h-[34rem] object-cover"
                 />
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900/70 to-transparent p-4">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-gray-900/70 to-transparent p-3 sm:p-4">
                   <h3 className="text-base sm:text-lg font-bold text-white text-center">
                     {slide.title || `Slide ${(index % totalSlides) + 1}`}
                   </h3>
