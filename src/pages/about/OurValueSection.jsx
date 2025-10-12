@@ -1,6 +1,10 @@
 import { CheckCircle, Star, Users, ShieldCheck } from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 const OurValuesSection = () => {
+  const [titleRef, titleVisible] = useScrollAnimation(0.1);
+  const [cardsRef, cardsVisible] = useScrollAnimation(0.1);
+
   const values = [
     {
       icon: CheckCircle,
@@ -27,11 +31,21 @@ const OurValuesSection = () => {
   return (
     <section className="bg-primary-100 pt-20 pb-26 mt-15">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-3xl sm:text-4xl font-bold text-primary-500 mb-15 leading-tight">
+        <h2 
+          ref={titleRef}
+          className={`text-3xl sm:text-4xl font-bold text-primary-500 mb-15 leading-tight transition-all duration-1000 ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           Our Values
         </h2>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-10">
+        <div 
+          ref={cardsRef}
+          className={`grid sm:grid-cols-2 md:grid-cols-4 gap-10 transition-all duration-1000 delay-200 ${
+            cardsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           {values.map(({ icon: Icon, title, text }) => (
             <div
               key={title}
@@ -50,5 +64,6 @@ const OurValuesSection = () => {
     </section>
   );
 };
+
 
 export default OurValuesSection;
