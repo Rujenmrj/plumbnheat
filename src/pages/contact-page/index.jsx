@@ -3,8 +3,17 @@ import React from "react";
 import Form from "../../components/Form";
 import Banner from "../../components/Banner";
 import CompanyDetails from "./CompanyDetails";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function Contact() {
+
+  const [heroRef, heroVisible] = useScrollAnimation(0.2);
+
+  const [formRef, formVisible] = useScrollAnimation(0.2);
+  const [mapRef, mapVisible] = useScrollAnimation(0.2);
+
+
+
   return (
     <main className="w-full bg-gray-faint">
       {/* Hero Banner Image */}
@@ -20,7 +29,12 @@ export default function Contact() {
         <div className="absolute inset-0"></div>
 
         {/* Text Content */}
-        <div className="relative z-10 px-4 sm:px-6 mb-15">
+         <div
+          ref={heroRef}
+          className={`relative z-10 px-4 sm:px-6 mb-15 transition-all duration-700 ease-out transform ${
+            heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
             CONTACT OUR TEAM
           </h2>
@@ -34,7 +48,12 @@ export default function Contact() {
       <section className="pt-6 pb-10 max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-10">
           {/* Left: Contact Form */}
-          <div className="flex-1 bg-white text-primary-500 rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10">
+         <div
+            ref={formRef}
+            className={`flex-1 bg-white text-primary-500 rounded-2xl shadow-lg p-6 sm:p-8 lg:p-10 transition-all duration-700 ease-out transform ${
+              formVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
             <Form
               title="Contact Us"
               onSubmit={(e) => {
@@ -45,7 +64,12 @@ export default function Contact() {
           </div>
 
           {/* Right: Map */}
-          <div className="flex-1 rounded-2xl overflow-hidden shadow-lg h-[300px] sm:h-[400px] md:h-auto">
+           <div
+            ref={mapRef}
+            className={`flex-1 rounded-2xl overflow-hidden shadow-lg h-[300px] sm:h-[400px] md:h-auto transition-all duration-700 ease-out transform ${
+              mapVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            }`}
+          >
             <iframe
               title="Aldershot Location"
               src="https://www.google.com/maps?q=Aldershot+Hampshire+GU11+3ST&output=embed"
