@@ -57,3 +57,5 @@ jobs:
 
             Please check the build logs attached below for details.
           attachments: build_log.txt
+
+          #test for email action
