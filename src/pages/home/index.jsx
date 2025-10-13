@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
 import FAQSection from "../../components/FAQSection";
+import AccreditationSection from "./AccreditationSection";
 import ContactUs from "./ContactUs";
 import HeroSection from "./hero-section";
 import ServicesSection from "./ServicesSection";
@@ -11,6 +12,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <Banner />
+      <AccreditationSection />
       <WhyChooseUs />
       <ContactUs />
       <FAQSection />
