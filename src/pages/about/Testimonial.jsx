@@ -44,7 +44,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="bg-primary-100 py-20">
+    <section className="bg-primary-100 mt-15 py-20">
       <div className="max-w-6xl mx-auto px-6">
         <h2 
           ref={titleRef}

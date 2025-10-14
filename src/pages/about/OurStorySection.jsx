@@ -19,8 +19,8 @@ const OurStorySection = () => {
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed max-w-lg mx-auto md:mx-0 mb-4">
             Founded with the goal of combining technical skill and honest service,
-            WE PLUMB N HEAT has grown through word-of-mouth and loyal customers who
-            value our attention to detail.
+            <span className="text-secondary-500 font-medium"> WE PLUMB N HEAT </span>
+            has grown through word-of-mouth and loyal customers who appreciate our attention to detail.
           </p>
           <p className="text-gray-600 text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
             We believe good workmanship and transparent communication are what truly

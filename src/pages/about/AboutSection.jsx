@@ -58,7 +58,7 @@ const AboutSection = () => {
               {" "}
               WE PLUMB N HEAT{" "}
             </span>
-            , we're passionate about keeping homes and businesses safe,
+            , we're passionate about keeping your homes and businesses safe,
             comfortable, and fully functional. Our skilled team of plumbers,
             heating engineers, and construction professionals brings years of
             experience and a reputation built on reliability, honesty, and
@@ -67,7 +67,7 @@ const AboutSection = () => {
 
           <p className="text-gray-800 text-base sm:text-lg leading-relaxed mt-4 px-1">
             Whether it's a small repair or a complete installation, we treat
-            every project with care and precision — ensuring lasting results and
+            every project with care and precision, ensuring lasting results and
             genuine customer satisfaction.
           </p>
         </div>

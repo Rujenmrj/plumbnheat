@@ -59,7 +59,7 @@ export default function ContactUs() {
 
           {/* RIGHT SIDE: Emergency + Details + Promise */}
           <div
-            className={`flex-1 flex flex-col gap-6 transition-all duration-700 delay-400 ${
+            className={`flex-1 flex flex-col gap-8 transition-all duration-700 delay-400 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-12"
@@ -76,7 +76,7 @@ export default function ContactUs() {
             </div>
 
             {/* Company Details */}
-            <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-4">
+            <div className="bg-white rounded-2xl shadow-md p-7 flex flex-col gap-4">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Company Details
               </h3>
@@ -99,7 +99,7 @@ export default function ContactUs() {
             </div>
 
             {/* Service Promise */}
-            <div className="bg-white rounded-2xl shadow-md p-6 flex flex-col gap-3">
+            <div className="bg-white rounded-2xl shadow-md p-7 flex flex-col gap-3">
               <h3 className="text-xl font-semibold text-gray-900 mb-2">
                 Our Service Promise
               </h3>
