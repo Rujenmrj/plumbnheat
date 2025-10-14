@@ -13,15 +13,11 @@ const FAQSection = () => {
         "Yes, we’re available 24/7 for emergency plumbing, heating, and construction-related issues across Aldershot and surrounding areas.",
     },
     {
-      question: "Are your technicians licensed and insured?",
+      question: "Do you provide free quotes?",
       answer:
-        "Absolutely. Every member of our team is fully licensed, insured, and professionally trained to handle all types of residential and commercial jobs.",
+        "We offer free quotations for all non-emergency services so you always know the cost before work begins. However, we do charge a small fee to diagnose a fault or repair on a system.",
     },
-    {
-      question: "Do you provide free estimates?",
-      answer:
-        "Yes, we offer free estimates for all non-emergency services so you always know the cost before work begins.",
-    },
+
     {
       question: "What areas do you serve?",
       answer:
@@ -30,7 +26,7 @@ const FAQSection = () => {
     {
       question: "How can I request a quote?",
       answer:
-        "Simply fill out our contact form or call us directly — our team will respond quickly to arrange your free estimate.",
+        "Simply fill out our contact form or call us directly — our team will respond quickly to arrange your free quotation.",
     },
   ];
 

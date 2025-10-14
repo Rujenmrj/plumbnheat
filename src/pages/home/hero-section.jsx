@@ -36,7 +36,7 @@ export default function HeroSection() {
           }`}
         >
           <h1 className="text-4xl sm:text-5xl font-bold text-primary-600 mb-6 leading-tight">
-            Reliable Plumbing & Heating Solutions
+            Reliable Plumbing & Heating Solutions & for all your Building needs.
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-lg">
             Professional plumbing, heating, and maintenance services you can
@@ -45,7 +45,7 @@ export default function HeroSection() {
 
           {/* Emergency Call Button */}
           <button className="bg-secondary-500 hover:bg-secondary-400 text-white px-6 py-3 rounded-lg font-semibold transition">
-            Emergency Call: <span className="font-bold">+977 980-XXXXXXX</span>
+            Emergency Call: <span className="font-bold">+44 7453 263938</span>
           </button>
 
           {/* Stats Section */}

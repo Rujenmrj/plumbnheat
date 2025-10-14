@@ -15,15 +15,15 @@ const Banner = ({ title, description, phone }) => {
         </h2>
         <p className="text-red-600 mt-3 text-lg">
           {description ||
-            "24/7 Service Available — Call us now for immediate assistance!"}
+            "24/7 Service Available — No job too big or small"}
         </p>
 
         <a
-          href={`tel:${phone || "9800000000"}`}
+          href={`tel:${phone || "07453263938"}`}
           className="mt-6 inline-flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-xl font-semibold shadow hover:bg-red-700 transition-all duration-200"
         >
           <PhoneCall className="w-5 h-5" />
-          Call {phone || "9800000000"}
+          Call {phone || "07453263938"}
         </a>
       </div>
     </section>

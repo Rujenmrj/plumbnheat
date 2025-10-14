@@ -14,7 +14,7 @@ const features = [
   {
     icon: <Users className="w-8 h-8 text-primary" />,
     title: "Experienced Professionals",
-    desc: "Our team consists of certified and skilled plumbers and technicians.",
+    desc: "Our team consists of certified and skilled plumbers and tradesmen.",
   },
   {
     icon: <Clock className="w-8 h-8 text-primary" />,
@@ -25,11 +25,6 @@ const features = [
     icon: <ThumbsUp className="w-8 h-8 text-primary" />,
     title: "Customer Satisfaction",
     desc: "We prioritize our clients’ comfort and safety above all else.",
-  },
-  {
-    icon: <Tag className="w-8 h-8 text-primary" />,
-    title: "Cheapest Rates in Aldershot",
-    desc: "Starting from £160 emergency call-out, beating local competitors’ rates.",
   },
   {
     icon: <ShieldCheck className="w-8 h-8 text-primary" />,
@@ -113,7 +108,7 @@ export default function WhyChooseUs() {
           className={`text-3xl font-bold text-center mt-20 mb-10 text-primary-600 transition-all duration-700 ${
             reviewsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}>
-          What Our Customers Say
+          What Our Clients Say
         </h2>
 
         {/* Review cards */}
