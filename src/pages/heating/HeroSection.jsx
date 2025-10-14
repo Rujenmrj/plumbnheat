@@ -1,8 +1,18 @@
-import { Flame, Droplets, Wrench, Phone, Clock, Shield } from "lucide-react";
-import { useScrollAnimation} from "../../components/hooks/useScrollAnimation";
+import {
+  Flame,
+  Droplets,
+  Wrench,
+  Phone,
+  Clock,
+  Shield,
+  Thermometer,
+} from "lucide-react";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const [heroRef, heroVisible] = useScrollAnimation(0.1);
+  const navigate = useNavigate();
 
   return (
     <div className="relative bg-gradient-to-br from-secondary-600 to-secondary-700 text-white overflow-hidden w-full">
@@ -28,7 +38,7 @@ export default function HeroSection() {
           className="absolute top-40 right-20 animate-bounce"
           style={{ animationDuration: "4s", animationDelay: "1s" }}
         >
-          <Droplets className="w-20 h-20 text-secondary-200 opacity-20" />
+          <Thermometer className="w-20 h-20 text-secondary-200 opacity-20" />
         </div>
         <div
           className="absolute bottom-40 left-1/4 animate-bounce"
@@ -38,10 +48,10 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div 
+      <div
         ref={heroRef}
-        className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 transition-all duration-1000 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+        className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-18 md:py-22 transition-all duration-1000 ${
+          heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -55,13 +65,31 @@ export default function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              Expert Heating &<br />
-              <span className="text-secondary-200">Plumbing Services</span>
+              Expert
+              <br />
+              <span className="text-secondary-100">Heating Solutions</span>
             </h1>
 
-            <p className="text-xl md:text-2xl mb-8 text-secondary-100 leading-relaxed">
-              Professional boiler installations, repairs, and complete plumbing
-              solutions for your home and business
+            <p className="text-[16px] md:text-[18px] mb-6 text-secondary-100 leading-relaxed">
+              With over 15 years of experience, we specialise in heating system
+              installations, boiler services, and repairs — delivering efficient
+              and reliable warmth for your home or business.
+            </p>
+
+            <div className="bg-white/15 backdrop-blur-sm rounded-lg p-4 mb-6 border border-white/20">
+              <p className="text-lg font-bold mb-1">
+                Prices starting from £1600
+              </p>
+              <p className="text-sm text-secondary-100">
+                We also provide boiler servicing and landlord safety
+                certifications to ensure your property meets all heating
+                standards.
+              </p>
+            </div>
+
+            <p className="text-base text-secondary-100 mb-8 font-medium">
+              Backed by over 15 years of experience, our engineers deliver
+              quality workmanship you can rely on.
             </p>
 
             {/* Quick Features */}
@@ -90,13 +118,29 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-white text-secondary-600 hover:bg-secondary-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
+              <a
+                href="tel:+447453263938"
+                className="bg-white text-secondary-600 hover:bg-secondary-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              >
                 <Phone className="w-5 h-5" />
-                Call Now: 0800 123 4567
+                Call Now: +44 7453 263938
+              </a>
+              <button
+                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30"
+                onClick={() => navigate("/contact")}
+              >
+                Free Quote
               </button>
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30">
-                Get Free Quote
-              </button>
+            </div>
+
+            {/* GAS SAFE LOGO & COMPANY REG */}
+            <div className="mt-8 text-center lg:text-left">
+              <img
+                src="/heating/gsrw.png"
+                alt="Gas Safe Registered"
+                className="w-30 mx-auto lg:mx-0 mb-2 rounded-2xl"
+              />
+              <p className="text-sm font-semibold text-secondary-100">Company Reg: 961318</p>
             </div>
           </div>
 
@@ -117,11 +161,11 @@ export default function HeroSection() {
               {/* Card 2 */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
                 <div className="bg-primary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Droplets className="w-7 h-7 text-white" />
+                  <Thermometer className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Central Heating</h3>
+                <h3 className="font-bold text-lg mb-2">System Installation</h3>
                 <p className="text-sm text-secondary-100">
-                  Full system installation & maintenance
+                  Complete heating system setup
                 </p>
               </div>
 
@@ -130,9 +174,9 @@ export default function HeroSection() {
                 <div className="bg-primary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                   <Wrench className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Plumbing Repairs</h3>
+                <h3 className="font-bold text-lg mb-2">Heating Repairs</h3>
                 <p className="text-sm text-secondary-100">
-                  All plumbing issues resolved fast
+                  Fast fixes for all heating issues
                 </p>
               </div>
 
@@ -141,35 +185,14 @@ export default function HeroSection() {
                 <div className="bg-primary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
                   <Clock className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-lg mb-2">Emergency Call</h3>
+                <h3 className="font-bold text-lg mb-2">Safety Certificates</h3>
                 <p className="text-sm text-secondary-100">
-                  24/7 rapid response service
+                  Landlord & property certifications
                 </p>
               </div>
-            </div>
 
-            {/* Trust Badge */}
-            <div className="mt-6 bg-white rounded-2xl p-6 shadow-2xl">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-secondary-600 font-bold text-2xl">
-                    500+
-                  </div>
-                  <div className="text-gray-600 text-sm">Happy Customers</div>
-                </div>
-                <div className="border-l-2 border-gray-200 pl-6">
-                  <div className="text-secondary-600 font-bold text-2xl">
-                    15+
-                  </div>
-                  <div className="text-gray-600 text-sm">Years Experience</div>
-                </div>
-                <div className="border-l-2 border-gray-200 pl-6">
-                  <div className="text-secondary-600 font-bold text-2xl">
-                    A+
-                  </div>
-                  <div className="text-gray-600 text-sm">Rating</div>
-                </div>
-              </div>
+              
+
             </div>
           </div>
         </div>

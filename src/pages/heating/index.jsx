@@ -7,7 +7,7 @@ export default function Heating() {
   return (
     <div>
       <HeroSection />
-      <GasSafeCertification />
+      
       <HeatingServices />
       <FAQSection />
     </div>

@@ -125,7 +125,7 @@ export default function HeatingServices() {
             HEATING SOLUTIONS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
-            Complete Heating Services
+           Heating Services
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
             From boiler installations to emergency repairs, we provide
@@ -184,9 +184,9 @@ export default function HeatingServices() {
                 </div>
 
                 {/* CTA Button */}
-                <button className="mt-6 w-full bg-secondary-500 hover:bg-secondary-600 text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
+                {/* <button className="mt-6 w-full bg-secondary-500 hover:bg-secondary-600 text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
                   Learn More
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
