@@ -67,29 +67,35 @@ const reviews = [
 ];
 
 export default function WhyChooseUs() {
-   const [featuresRef, featuresVisible] = useScrollAnimation(0.15);
+  const [featuresRef, featuresVisible] = useScrollAnimation(0.15);
   const [reviewsRef, reviewsVisible] = useScrollAnimation(0.15);
   return (
     <section className="w-full py-16 bg-primary-300/30 mt-15 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Why Choose Us */}
-        <h2 ref={featuresRef}
+        <h2
+          ref={featuresRef}
           className={`text-3xl font-bold text-center mb-10 text-primary-600 transition-all duration-700 ${
-            featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+            featuresVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           Why Choose Us
         </h2>
 
         {/* Feature cards */}
-        <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory md:grid md:grid-cols-5 md:overflow-visible md:gap-8 scrollbar-hide">
+        <div className="flex overflow-x-auto gap-6 snap-x snap-mandatory md:grid md:grid-cols-4 md:overflow-visible md:gap-8 scrollbar-hide">
           {features.map((item, idx) => (
             <div
               key={idx}
               className="flex-shrink-0 w-72 md:w-auto bg-white rounded-2xl shadow-md p-6 snap-start hover:shadow-lg transition-all duration-300 border border-primary-100 hover:-translate-y-1"
               style={{
-                transitionDelay: featuresVisible ? `${idx * 100}ms` : '0ms',
+                transitionDelay: featuresVisible ? `${idx * 100}ms` : "0ms",
                 opacity: featuresVisible ? 1 : 0,
-                transform: featuresVisible ? 'translateY(0)' : 'translateY(20px)'
+                transform: featuresVisible
+                  ? "translateY(0)"
+                  : "translateY(20px)",
               }}
             >
               <div className="flex flex-col items-center text-center space-y-3">
@@ -104,10 +110,14 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Reviews Section */}
-        <h2 ref={reviewsRef}
+        <h2
+          ref={reviewsRef}
           className={`text-3xl font-bold text-center mt-20 mb-10 text-primary-600 transition-all duration-700 ${
-            reviewsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-          }`}>
+            reviewsVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-8"
+          }`}
+        >
           What Our Clients Say
         </h2>
 
@@ -118,9 +128,9 @@ export default function WhyChooseUs() {
               key={index}
               className="flex-shrink-0 w-80 bg-white rounded-2xl shadow-md p-6 snap-start hover:shadow-lg transition-all duration-300 border border-secondary-200"
               style={{
-                transitionDelay: reviewsVisible ? `${index * 150}ms` : '0ms',
+                transitionDelay: reviewsVisible ? `${index * 150}ms` : "0ms",
                 opacity: reviewsVisible ? 1 : 0,
-                transform: reviewsVisible ? 'scale(1)' : 'scale(0.9)'
+                transform: reviewsVisible ? "scale(1)" : "scale(0.9)",
               }}
             >
               <div className="flex items-center mb-2">
