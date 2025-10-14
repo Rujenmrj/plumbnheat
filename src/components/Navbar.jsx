@@ -1,6 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Flame, Droplet, Hammer } from "lucide-react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Flame,
+  Droplet,
+  Hammer,
+  ChefHat,
+} from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,6 +30,7 @@ export default function Navbar() {
     { icon: Flame, label: "Heating", to: "/services/heating" },
     { icon: Droplet, label: "Plumbing", to: "/services/plumbing" },
     { icon: Hammer, label: "Construction", to: "/services/construction" },
+    { icon: ChefHat, label: "Catering", to: "/services/catering" },
   ];
 
   // Update underline based on active route

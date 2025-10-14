@@ -40,32 +40,28 @@ export default function ServicesSection() {
       title: "Plumbing Repairs",
       description:
         "From leaky taps to burst pipes, our expert plumbers provide fast and reliable repair solutions for your home or business.",
-      image:
-        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=400&fit=crop",
+      image: "/home/plumbing.png",
       link: "/services/plumbing",
     },
     {
       title: "Heating Solutions",
       description:
         "We install, maintain, and repair heating systems to keep your home warm and comfortable throughout the year.",
-      image:
-        "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop",
+      image: "/home/heating.png",
       link: "/services/heating",
     },
     {
       title: "Construction & Installation",
       description:
         "Professional plumbing and heating installations for new homes, renovations, and commercial properties — done right from the ground up.",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop",
+      image: "/home/construction2.png",
       link: "/services/construction",
     },
     {
       title: "Professional Catering",
       description:
         "Professional plumbing and heating installations for new homes, renovations, and commercial properties — done right from the ground up.",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop",
+      image: "/home/catering.jpg",
       link: "/services/catering",
     },
   ];
