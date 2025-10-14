@@ -161,7 +161,7 @@ export default function HeroSection() {
 
   return (
     <section className="bg-primary-100 w-full">
-      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-12">
         <div
           className={`flex-1 flex justify-center transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-12"
