@@ -7,11 +7,11 @@ import {
   Clock,
   CheckCircle,
   TrendingDown,
+  Phone,
 } from "lucide-react";
-import { useScrollAnimation} from "../../components/hooks/useScrollAnimation";
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function HeatingServices() {
-
   const [headerRef, headerVisible] = useScrollAnimation(0.1);
   const [servicesRef, servicesVisible] = useScrollAnimation(0.1);
   const [ctaRef, ctaVisible] = useScrollAnimation(0.1);
@@ -125,7 +125,7 @@ export default function HeatingServices() {
             HEATING SOLUTIONS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
-           Heating Services
+            Heating Services
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
             From boiler installations to emergency repairs, we provide
@@ -265,9 +265,23 @@ export default function HeatingServices() {
             Our Gas Safe engineers are ready to help with any heating issue
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30">
-              Emergency Call Out
-            </button>
+            {/* Emergency Call Out Button with Ripple Glow */}
+            <div className="relative inline-block">
+              {/* Ripple Glow Animation */}
+              <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-40 animate-ping blur-md"></span>
+              <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-30 blur-lg animate-pulse"></span>
+
+              <a
+                href="tel:+447453263938"
+                className="relative bg-primary-500 hover:bg-primary-600
+        text-white px-8 py-4 rounded-lg font-semibold text-lg 
+        transition-all transform hover:scale-105 shadow-lg flex 
+        items-center justify-center gap-2"
+              >
+                Emergency Call Out
+                <Phone className="w-5 h-5" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
