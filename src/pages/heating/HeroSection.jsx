@@ -57,11 +57,22 @@ export default function HeroSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            <div className="inline-block bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-3">
               <span className="text-sm font-semibold flex items-center gap-2">
                 <Shield className="w-4 h-4" />
                 Gas Safe Registered & Fully Insured
               </span>
+            </div>
+            {/* GAS SAFE LOGO & COMPANY REG */}
+            <div className=" text-left lg:text-left">
+              <img
+                src="/heating/gsrw.png"
+                alt="Gas Safe Registered"
+                className="w-30 mx-0 lg:mx-0 mb-2 rounded-2xl"
+              />
+              <p className="text-sm font-semibold text-secondary-100">
+                Company Reg: 961318
+              </p>
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
@@ -115,33 +126,6 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="tel:+447453263938"
-                className="bg-white text-secondary-600 hover:bg-secondary-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Call Now: +44 7453 263938
-              </a>
-              <button
-                className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30"
-                onClick={() => navigate("/contact")}
-              >
-                Free Quote
-              </button>
-            </div>
-
-            {/* GAS SAFE LOGO & COMPANY REG */}
-            <div className="mt-8 text-center lg:text-left">
-              <img
-                src="/heating/gsrw.png"
-                alt="Gas Safe Registered"
-                className="w-30 mx-auto lg:mx-0 mb-2 rounded-2xl"
-              />
-              <p className="text-sm font-semibold text-secondary-100">Company Reg: 961318</p>
-            </div>
           </div>
 
           {/* Right Content - Service Highlights */}
@@ -190,9 +174,35 @@ export default function HeroSection() {
                   Landlord & property certifications
                 </p>
               </div>
+            </div>
 
-              
+            {/* CTA Buttons */}
+            <div className="flex flex-row gap-4 mt-8">
+              {/* Call Now Button with Ripple Glow */}
+              <div className="relative inline-block">
+                {/* Ripple Glow Animation */}
+                <span className="absolute inset-0 rounded-lg bg-white opacity-40 animate-ping blur-md"></span>
+                <span className="absolute inset-0 rounded-lg bg-white opacity-30 blur-lg animate-pulse"></span>
 
+                <a
+                  href="tel:+447453263938"
+                  className="relative bg-white hover:bg-white/90
+       text-primary-500 px-8 py-4 rounded-lg font-semibold text-lg
+       transition-all transform hover:scale-105 shadow-lg flex 
+       items-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call Now: +44 7453 263938
+                </a>
+              </div>
+
+              {/* Free Quote Button */}
+              <button
+                className="flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"
+                onClick={() => navigate("/contact")}
+              >
+                Free Quote
+              </button>
             </div>
           </div>
         </div>
