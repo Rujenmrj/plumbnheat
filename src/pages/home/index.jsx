@@ -1,5 +1,6 @@
 import Banner from "../../components/Banner";
 import FAQSection from "../../components/FAQSection";
+import AreasWeCover from "../construction/AreasWeCover";
 import AccreditationSection from "./AccreditationSection";
 import ContactUs from "./ContactUs";
 import HeroSection from "./hero-section";
@@ -14,6 +15,7 @@ export default function Home() {
       <Banner />
       <AccreditationSection />
       <WhyChooseUs />
+      <AreasWeCover />
       <ContactUs />
       <FAQSection />
       {/* You can add more sections below later, like <ServicesPreview /> or <Testimonials /> */}
