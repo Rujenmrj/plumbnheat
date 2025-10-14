@@ -14,7 +14,7 @@ export default function GasSafeCertification() {
       title: "Gas Safe Registered",
       description:
         "All our engineers are Gas Safe registered - the only legal requirement for gas work in the UK",
-      number: "Register Number: 123456",
+      number: "Register Number: 961318",
     },
     {
       icon: <Award className="w-8 h-8" />,
@@ -143,7 +143,7 @@ export default function GasSafeCertification() {
                 Gas Safe Registered
               </div>
               <div className="text-secondary-600 font-bold text-4xl mb-4">
-                123456
+                 961318
               </div>
               <p className="text-gray-600 text-sm mb-4">
                 Our registration number - verify us at gassaferegister.co.uk
