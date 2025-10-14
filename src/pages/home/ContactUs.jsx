@@ -71,7 +71,7 @@ export default function ContactUs() {
                 heading="24/7 Emergency Service"
                 subText="Plumbing, Heating, Construction – Don't wait!"
                 btnText="Call Now"
-                phoneNumber="+44 1234 567890"
+                phoneNumber="+44 7453 263938"
               />
             </div>
 
@@ -82,15 +82,15 @@ export default function ContactUs() {
               </h3>
               <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-gray-700">+44 1234 567890</span>
+                <span className="text-gray-700">+44 7453 263938</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />
-                <span className="text-gray-700">info@plumbnheat.co.uk</span>
+                <span className="text-gray-700">weplumbnheat@gmail.com</span>
               </div>
               <div>
                 <p className="font-semibold text-gray-800">Service Area:</p>
-                <p className="text-gray-700">Aldershot, Hampshire</p>
+                <p className="text-gray-700">We cover parts of Hampshire and Surrey.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-800">Business Hours:</p>
@@ -106,20 +106,20 @@ export default function ContactUs() {
               <ul className="flex flex-col gap-2 text-gray-700">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary" />
-                  Free estimates on all non-emergency services
+                  Free Quotations for any installation or upgrade services
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary" />
-                  Upfront pricing with no hidden fees
+                  Transparent pricing with no hidden fees
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary" />
-                  100% satisfaction guarantee
+                  Customer Needs First
                 </li>
-                <li className="flex items-center gap-2">
+                {/* <li className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-primary" />
                   Licensed, insured, and bonded professionals
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
