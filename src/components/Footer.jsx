@@ -13,7 +13,7 @@ export default function Footer() {
             <a href="#" className="hover:text-secondary-300 transition-colors">
               Services
             </a>
-            <a href="#" className="hover:text-secondary-300 transition-colors">
+            <a href="/about" className="hover:text-secondary-300 transition-colors">
               About
             </a>
             <a href="/contact" className="hover:text-secondary-300 transition-colors">

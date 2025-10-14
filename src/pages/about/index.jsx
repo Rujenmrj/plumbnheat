@@ -7,15 +7,19 @@ import Testimonial from "./Testimonial";
 import ContactUs from "../home/ContactUs";
 import Banner from "../../components/Banner";
 import FAQSection from "../../components/FAQSection"
+import CustomerNeedsSection from "./CustomerNeedsSection";
+import AccreditationSection from "../home/AccreditationSection";
 
 const About = () => {
   return (
-    <div className="bg-[#F6F8FC] text-[#222]">
+    <div className="bg-[#ffffff] text-[#222]">
       <AboutSection />
       <OurStorySection />
+      <CustomerNeedsSection />
       <Banner />
       <OurValuesSection />
       <WhyChooseUsSection />
+      <AccreditationSection />
       <Testimonial />
       <ContactUs />
       <FAQSection />
