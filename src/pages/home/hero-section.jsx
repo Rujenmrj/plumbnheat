@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone } from "lucide-react";
 
 const ImageSlider = ({ slides, autoPlayInterval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -180,22 +180,27 @@ export default function HeroSection() {
               : "opacity-0 -translate-x-12"
           }`}
         >
-          <h1 className="text-4xl sm:text-5xl font-bold text-primary-900 mb-6 leading-tight">
-            Reliable Plumbing & Heating Solutions
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary-600 mb-6 leading-tight">
+            Reliable Plumbing, Heating Solutions & for all your Building needs
           </h1>
           <p className="text-gray-600 text-lg mb-8 max-w-lg mx-auto md:mx-0">
             Professional plumbing, heating, and maintenance services you can
             trust — serving homes and businesses with excellence and care.
           </p>
 
-          <button className="bg-secondary-500 hover:bg-secondary-400 text-white px-6 py-3 rounded-lg font-semibold transition hover:cursor-pointer">
-            Emergency Call: <span className="font-bold">+977 980-XXXXXXX</span>
-          </button>
+          <a
+            href="tel:+447453263938"
+            className="inline-flex items-center justify-center bg-secondary-500 hover:bg-secondary-400 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg hover:cursor-pointer"
+          >
+            <Phone className="w-5 h-5 mr-2" />
+            Emergency Call{" "}
+            {/* <span className="font-bold ml-2">+44 7453 263938</span> */}
+          </a>
 
           <div className="mt-10 flex justify-center md:justify-start gap-8 text-primary-700">
             {[
               { num: "1200+", label: "Happy Customers", delay: 200 },
-              { num: "10+", label: "Years Experience", delay: 400 },
+              { num: "15+", label: "Years Experience", delay: 400 },
               { num: "24/7", label: "Service", delay: 600 },
             ].map((stat, idx) => (
               <div
