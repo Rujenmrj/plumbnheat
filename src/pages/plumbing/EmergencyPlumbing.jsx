@@ -19,7 +19,7 @@ export default function EmergencyPlumbing() {
       title: "Burst Pipes",
       description:
         "Immediate response to burst pipes causing flooding and water damage",
-      response: "30 min response",
+      response: "60 min response",
     },
     {
       icon: <AlertCircle className="w-8 h-8" />,
@@ -39,13 +39,12 @@ export default function EmergencyPlumbing() {
       icon: <Droplets className="w-8 h-8" />,
       title: "Overflow Issues",
       description:
-      "Quick action for overflowing toilets, sinks, or appliances to prevent water damage",
-    response: "Immediate assistance",
-
+        "Quick action for overflowing toilets, sinks, or appliances to prevent water damage",
+      response: "Immediate assistance",
     },
   ];
 
- return (
+  return (
     <div className="py-20 bg-gradient-to-br from-primary-600 to-primary-700 text-white w-full relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -60,10 +59,12 @@ export default function EmergencyPlumbing() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Emergency info */}
-          <div 
+          <div
             ref={leftRef}
             className={`transition-all duration-1000 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              leftVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
@@ -88,20 +89,10 @@ export default function EmergencyPlumbing() {
                   <CheckCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-bold text-lg">Rapid Response Time</div>
+                  <div className="font-bold text-lg">Expert Plumbers</div>
                   <p className="text-secondary-100">
-                    Average response time of 30-60 minutes for emergencies
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 mt-1">
-                  <CheckCircle className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="font-bold text-lg">No Call-Out Charges</div>
-                  <p className="text-secondary-100">
-                    Transparent pricing with no hidden fees or charges
+                    Certified and experienced plumbers ready to handle any
+                    emergency.
                   </p>
                 </div>
               </div>
@@ -112,7 +103,18 @@ export default function EmergencyPlumbing() {
                 <div>
                   <div className="font-bold text-lg">Fully Stocked Vans</div>
                   <p className="text-secondary-100">
-                    Our engineers carry common parts for immediate repairs
+                    Our engineers carry common parts for immediate repairs.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2 mt-1">
+                  <CheckCircle className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-bold text-lg">Safe & Reliable</div>
+                  <p className="text-secondary-100">
+                    All work completed to high safety and quality standards.
                   </p>
                 </div>
               </div>
@@ -129,7 +131,7 @@ export default function EmergencyPlumbing() {
                     EMERGENCY HOTLINE
                   </div>
                   <div className="text-3xl font-bold text-secondary-600">
-                    0800 123 4567
+                    +44 7453 263938
                   </div>
                 </div>
               </div>
@@ -137,18 +139,23 @@ export default function EmergencyPlumbing() {
                 Call now for immediate assistance. Our team is ready to help 24
                 hours a day, 7 days a week.
               </p>
-              <button className="w-full bg-secondary-500 hover:bg-secondary-600 text-white py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+              <a
+                href="tel: +44 7453 263938"
+                className="w-full bg-secondary-500 hover:bg-secondary-600 text-white py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              >
                 <Phone className="w-5 h-5" />
                 Call Emergency Line
-              </button>
+              </a>
             </div>
           </div>
 
           {/* Right side - Emergency types */}
-          <div 
+          <div
             ref={rightRef}
             className={`transition-all duration-1000 delay-200 ${
-              rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              rightVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -172,7 +179,7 @@ export default function EmergencyPlumbing() {
             </div>
 
             {/* Trust badges */}
-            <div className="mt-6 grid grid-cols-3 gap-4">
+            <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
                 <Clock className="w-8 h-8 mx-auto mb-2" />
                 <div className="font-bold text-2xl">24/7</div>
@@ -180,13 +187,8 @@ export default function EmergencyPlumbing() {
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
                 <Zap className="w-8 h-8 mx-auto mb-2" />
-                <div className="font-bold text-2xl">30min</div>
+                <div className="font-bold text-2xl">60min</div>
                 <div className="text-xs text-secondary-100">Response</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <Shield className="w-8 h-8 mx-auto mb-2" />
-                <div className="font-bold text-2xl">100%</div>
-                <div className="text-xs text-secondary-100">Guaranteed</div>
               </div>
             </div>
           </div>

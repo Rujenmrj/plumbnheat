@@ -8,7 +8,6 @@ export default function Plumbing() {
   return (
     <>
       <HeroSection />
-      <AccreditationSection />
       <PlumbingServices />
       <EmergencyPlumbing />
       <FAQSection />
