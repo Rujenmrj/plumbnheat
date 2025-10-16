@@ -8,6 +8,8 @@ import {
   CheckCircle,
   TrendingDown,
   Phone,
+  Leaf,
+  Siren,
 } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
@@ -78,7 +80,7 @@ export default function HeatingServices() {
       ],
     },
     {
-      icon: <TrendingDown className="w-12 h-12" />,
+      icon: <Leaf className="w-12 h-12" />,
       title: "Energy Efficiency",
       description:
         "Improve your home's energy efficiency with modern heating systems. Lower bills and reduce your carbon footprint.",
@@ -93,7 +95,7 @@ export default function HeatingServices() {
       ],
     },
     {
-      icon: <Shield className="w-12 h-12" />,
+      icon: <Siren className="w-12 h-12" />,
       title: "Emergency Repairs",
       description:
         "24/7 emergency heating repairs when you need us most. No call-out charges during business hours.",

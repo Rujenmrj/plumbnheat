@@ -1,4 +1,4 @@
-import { Droplets, Wrench, Phone, Clock, Shield, Zap } from "lucide-react";
+import { Droplets, Wrench, Phone, Clock, Shield, Zap, Calendar, ToolCase, Pipette, Siren } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
 
@@ -98,11 +98,11 @@ export default function HeroSection() {
               {/* 15 Years of Experience */}
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
-                  <Shield className="w-6 h-6" />
+                  <Calendar className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold">15 Years</div>
-                  <div className="text-sm text-primary-100">Of Experience</div>
+                  <div className="text-sm text-primary-100">Experience</div>
                 </div>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function HeroSection() {
               {/* Card 3 */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
                 <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Zap className="w-7 h-7 text-white" />
+                  <Pipette className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Drain Services</h3>
                 <p className="text-sm text-primary-100">
@@ -147,7 +147,7 @@ export default function HeroSection() {
               {/* Card 4 */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
                 <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Clock className="w-7 h-7 text-white" />
+                  <Siren className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Emergency</h3>
                 <p className="text-sm text-primary-100">

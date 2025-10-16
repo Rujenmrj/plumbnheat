@@ -7,8 +7,10 @@ export default function Heating() {
   return (
     <div>
       <HeroSection />
-      <AccreditationSection />
       <HeatingServices />
+      <div className="mb-14">
+      <AccreditationSection />
+      </div>
       <FAQSection />
     </div>
   );

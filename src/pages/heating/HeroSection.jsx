@@ -6,6 +6,10 @@ import {
   Clock,
   Shield,
   Thermometer,
+  UserCheck,
+  Package,
+  BadgeCheck,
+  Award,
 } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
@@ -119,7 +123,7 @@ export default function HeroSection() {
 
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
-                  <Shield className="w-6 h-6" />
+                  <BadgeCheck className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold">Fully Qualified</div>
@@ -131,7 +135,7 @@ export default function HeroSection() {
 
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
-                  <Thermometer className="w-6 h-6" />
+                  <UserCheck className="w-6 h-6" />
                 </div>
                 <div>
                   <div className="font-semibold">LPG Qualified</div>
@@ -160,7 +164,7 @@ export default function HeroSection() {
               {/* Card 2 */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
                 <div className="bg-primary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Thermometer className="w-7 h-7 text-white" />
+                  <Package className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">System Installation</h3>
                 <p className="text-sm text-secondary-100">
@@ -182,7 +186,7 @@ export default function HeroSection() {
               {/* Card 4 */}
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
                 <div className="bg-primary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Clock className="w-7 h-7 text-white" />
+                  <Award className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Safety Certificates</h3>
                 <p className="text-sm text-secondary-100">
