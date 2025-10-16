@@ -45,8 +45,7 @@ export default function Hero() {
             <span className="text-secondary-300">One Project at a Time</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-primary-100 max-w-3xl mx-auto">
-            From small renovations to complete refurbishments - Your trusted
-            partner for all construction and plumbing needs
+            From home renovations to large-scale building projects — your trusted partner for quality construction and refurbishment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="relative inline-block">

@@ -13,7 +13,7 @@ export default function ConstructionPage() {
     <div className="w-full flex flex-col items-center">
       <HeroConstruction />
       <AboutConstruction />
-      <CoverageArea />
+      {/* <CoverageArea /> */}
       <ServicesGrid />
       {/* <ServicePromise /> */}
       <WhyChooseUs />
