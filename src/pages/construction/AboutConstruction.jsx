@@ -12,15 +12,17 @@ export default function AboutConstruction() {
           : "opacity-0 translate-y-10"
       }`}
     >
-      <h2 className="text-3xl font-semibold mb-6">
+      <h2 className="text-3xl text-primary-600 font-semibold mb-6">
         Quality Building & Renovation Services
       </h2>
       <p className="text-lg text-gray-600 leading-relaxed">
         Based in Aldershot, Hampshire, we provide top-quality building,
-        renovation, and plumbing services for homeowners and businesses alike.
-        Whether you’re planning a home renovation, an extension, loft
-        conversion, or full refurbishment, our experienced builders are
-        committed to delivering outstanding results — on time and within budget.
+        renovation, and refurbishment services for homeowners and businesses.
+        Our complete in-house solutions cover all your building needs, from
+        structural works to heating, plumbing, and electrical installations. We
+        are your one-stop shop for projects of any size. With over 15 years of
+        experience, our team ensures quality, efficiency, and reliability in
+        every project.
       </p>
     </section>
   );

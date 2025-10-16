@@ -54,10 +54,12 @@ export default function Hero() {
               <span className="absolute inset-0 rounded-lg bg-secondary-500 opacity-30 blur-lg animate-pulse"></span>
 
               {/* Main Button */}
-              <button className="relative bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
+              <a
+              href="tel:+447453263938" 
+              className="relative bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center gap-2">
                 Call Us Now!
                 <PhoneCallIcon className="w-5 h-5" />
-              </button>
+              </a>
             </div>
             <button
               className="flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"

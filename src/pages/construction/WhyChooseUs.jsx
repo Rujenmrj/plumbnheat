@@ -1,11 +1,9 @@
 import { CheckCircle, Phone } from "lucide-react";
-import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function WhyChooseUs() {
-
   const [leftRef, leftVisible] = useScrollAnimation(0.1);
   const [rightRef, rightVisible] = useScrollAnimation(0.1);
-
 
   const reasons = [
     "Licensed and fully insured professionals",
@@ -20,10 +18,12 @@ export default function WhyChooseUs() {
     <div className="py-20 bg-primary-faint w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div 
+          <div
             ref={leftRef}
             className={`transition-all duration-1000 ${
-              leftVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              leftVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6">
@@ -44,10 +44,12 @@ export default function WhyChooseUs() {
             </div>
           </div>
 
-          <div 
+          <div
             ref={rightRef}
             className={`relative transition-all duration-1000 delay-200 ${
-              rightVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              rightVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-10"
             }`}
           >
             <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-3xl p-8 text-white shadow-2xl transform rotate-2">
@@ -62,10 +64,15 @@ export default function WhyChooseUs() {
                 </p>
                 <div className="bg-white/20 backdrop-blur-sm rounded-xl p-4">
                   <div className="flex items-center gap-3 mb-3">
-                    <Phone className="w-6 h-6" />
+                    <Phone className="w-6 h-6 animate-pulse" />
                     <span className="text-xl font-semibold">Call Us Now</span>
                   </div>
-                  <div className="text-3xl font-bold">0800 123 4567</div>
+                  <a
+                    href="tel:+448001234567"
+                    className="block text-2xl sm:text-4xl font-extrabold text-white hover:text-secondary-100 transition-all duration-200"
+                  >
+                    +44 7453 263938
+                  </a>
                 </div>
               </div>
             </div>
