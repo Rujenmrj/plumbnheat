@@ -125,7 +125,7 @@ export default function HeatingServices() {
             HEATING SOLUTIONS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
-            Heating Services
+            Our Heating Services
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
             From boiler installations to emergency repairs, we provide
@@ -238,11 +238,6 @@ export default function HeatingServices() {
                       </div>
                     ))}
                   </div>
-
-                  {/* CTA Button */}
-                  <button className="w-full bg-secondary-500 hover:bg-secondary-600 text-white py-2.5 rounded-lg font-semibold text-sm transition-all">
-                    Learn More
-                  </button>
                 </div>
               </div>
             ))}
@@ -267,9 +262,9 @@ export default function HeatingServices() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             {/* Emergency Call Out Button with Ripple Glow */}
             <div className="relative inline-block">
-              {/* Ripple Glow Animation */}
+              {/* Ripple Glow Animation
               <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-40 animate-ping blur-md"></span>
-              <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-30 blur-lg animate-pulse"></span>
+              <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-30 blur-lg animate-pulse"></span> */}
 
               <a
                 href="tel:+447453263938"
