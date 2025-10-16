@@ -69,8 +69,8 @@ export default function HeroSection() {
               plumbers ready to solve all your plumbing needs
             </p>
 
-            {/* Quick Features */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            {/* Quick Features including Years of Experience */}
+            <div className="grid grid-cols-3 gap-4 mb-8">
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
                   <Clock className="w-6 h-6" />
@@ -82,6 +82,7 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
+
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
                   <Zap className="w-6 h-6" />
@@ -93,30 +94,17 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-row flex-wrap gap-4 mt-8">
-              {/* Call Now Button with Ripple Glow */}
-              <div className="relative inline-block">
-                
-
-                <a
-                  href="tel:+447453263938"
-                  className="relative bg-white hover:bg-white/90 text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform shadow-lg flex items-center gap-2"
-                >
-                  <Phone className="w-5 h-5" />
-                  Call Now: +44 7453 263938
-                </a>
+              {/* 15 Years of Experience */}
+              <div className="flex items-center gap-3">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
+                  <Shield className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="font-semibold">15 Years</div>
+                  <div className="text-sm text-primary-100">Of Experience</div>
+                </div>
               </div>
-
-              {/* Free Quote Button */}
-              <button
-                onClick={() => navigate("/contact")}
-                className="flex items-center cursor-pointer justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"
-              >
-                Free Quote
-              </button>
             </div>
           </div>
 
@@ -168,28 +156,26 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Trust Badge */}
-            <div className="mt-6 bg-white rounded-2xl p-6 shadow-2xl">
-              <div className="flex items-center justify-between">
-                <div>
-                  <div className="text-secondary-600 font-bold text-2xl">
-                    1000+
-                  </div>
-                  <div className="text-gray-600 text-sm">Jobs Completed</div>
-                </div>
-                <div className="border-l-2 border-gray-200 pl-6">
-                  <div className="text-secondary-600 font-bold text-2xl">
-                    20+
-                  </div>
-                  <div className="text-gray-600 text-sm">Years Experience</div>
-                </div>
-                <div className="border-l-2 border-gray-200 pl-6">
-                  <div className="text-secondary-600 font-bold text-2xl">
-                    4.9★
-                  </div>
-                  <div className="text-gray-600 text-sm">Average Rating</div>
-                </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-row flex-wrap gap-4 mt-8">
+              {/* Call Now Button with Ripple Glow */}
+              <div className="relative inline-block">
+                <a
+                  href="tel:+447453263938"
+                  className="relative bg-white hover:bg-white/90 text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform shadow-lg flex items-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call Now: +44 7453 263938
+                </a>
               </div>
+
+              {/* Free Quote Button */}
+              <button
+                onClick={() => navigate("/contact")}
+                className="flex items-center cursor-pointer justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"
+              >
+                Free Quote
+              </button>
             </div>
           </div>
         </div>
