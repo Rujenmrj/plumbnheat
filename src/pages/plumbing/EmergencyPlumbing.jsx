@@ -6,6 +6,10 @@ import {
   Shield,
   CheckCircle,
   Droplets,
+  Flame,
+  AlertTriangle,
+  Ban,
+  Bell,
 } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
@@ -22,21 +26,21 @@ export default function EmergencyPlumbing() {
       response: "60 min response",
     },
     {
-      icon: <AlertCircle className="w-8 h-8" />,
+      icon: <Ban className="w-8 h-8" />,
       title: "Blocked Drains",
       description:
         "Emergency drain unblocking to prevent overflow and sewage backup",
       response: "Same day service",
     },
     {
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Flame className="w-8 h-8" />,
       title: "No Hot Water",
       description:
         "Urgent repairs to restore your hot water and heating systems",
       response: "Fast diagnosis",
     },
     {
-      icon: <Droplets className="w-8 h-8" />,
+      icon: <AlertTriangle className="w-8 h-8" />,
       title: "Overflow Issues",
       description:
         "Quick action for overflowing toilets, sinks, or appliances to prevent water damage",
@@ -181,12 +185,12 @@ export default function EmergencyPlumbing() {
             {/* Trust badges */}
             <div className="mt-6 grid grid-cols-2 gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <Clock className="w-8 h-8 mx-auto mb-2" />
+                <Bell className="w-8 h-8 mx-auto mb-2" />
                 <div className="font-bold text-2xl">24/7</div>
                 <div className="text-xs text-secondary-100">Available</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center border border-white/20">
-                <Zap className="w-8 h-8 mx-auto mb-2" />
+                <Clock className="w-8 h-8 mx-auto mb-2" />
                 <div className="font-bold text-2xl">60min</div>
                 <div className="text-xs text-secondary-100">Response</div>
               </div>

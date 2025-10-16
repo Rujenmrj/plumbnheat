@@ -50,6 +50,11 @@ const CompanyDetails = () => {
           </div>
 
           <div>
+                <p className="font-semibold text-gray-800">Service Area:</p>
+                <p className="text-gray-700">We cover parts of Hampshire and Surrey.</p>
+              </div>
+
+          <div>
             <p className="font-semibold text-gray-800">Business Hours:</p>
             <p className="text-gray-600">Mon–Sun: 24/7</p>
           </div>
