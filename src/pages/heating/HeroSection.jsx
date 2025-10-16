@@ -64,7 +64,7 @@ export default function HeroSection() {
               </span>
             </div>
             {/* GAS SAFE LOGO & COMPANY REG */}
-            <div className=" text-left lg:text-left">
+            {/* <div className=" text-left lg:text-left">
               <img
                 src="/heating/gsrw.png"
                 alt="Gas Safe Registered"
@@ -73,7 +73,7 @@ export default function HeroSection() {
               <p className="text-sm font-semibold text-secondary-100">
                 Company Reg: 961318
               </p>
-            </div>
+            </div> */}
 
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Expert
@@ -104,25 +104,40 @@ export default function HeroSection() {
             </p>
 
             {/* Quick Features */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
-                  <Clock className="w-6 h-6" />
+                  <Wrench className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold">24/7 Available</div>
+                  <div className="font-semibold">Powerflushing</div>
                   <div className="text-sm text-secondary-100">
-                    Emergency Service
+                    System Cleaning
                   </div>
                 </div>
               </div>
+
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
                   <Shield className="w-6 h-6" />
                 </div>
                 <div>
-                  <div className="font-semibold">Guaranteed</div>
-                  <div className="text-sm text-secondary-100">Quality Work</div>
+                  <div className="font-semibold">Fully Qualified</div>
+                  <div className="text-sm text-secondary-100">
+                    Gas Safe Engineers
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
+                  <Thermometer className="w-6 h-6" />
+                </div>
+                <div>
+                  <div className="font-semibold">LPG Qualified</div>
+                  <div className="text-sm text-secondary-100">
+                    Expert Engineer
+                  </div>
                 </div>
               </div>
             </div>
@@ -181,8 +196,8 @@ export default function HeroSection() {
               {/* Call Now Button with Ripple Glow */}
               <div className="relative inline-block">
                 {/* Ripple Glow Animation */}
-                <span className="absolute inset-0 rounded-lg bg-white opacity-40 animate-ping blur-md"></span>
-                <span className="absolute inset-0 rounded-lg bg-white opacity-30 blur-lg animate-pulse"></span>
+                {/* <span className="absolute inset-0 rounded-lg bg-white opacity-40 animate-ping blur-md"></span>
+                <span className="absolute inset-0 rounded-lg bg-white opacity-30 blur-lg animate-pulse"></span> */}
 
                 <a
                   href="tel:+447453263938"
