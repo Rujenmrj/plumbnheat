@@ -9,11 +9,11 @@ export default function WhyChooseUs() {
 
   const reasons = [
     "Licensed and fully insured professionals",
-    "20+ years of combined experience",
+    "15+ years of combined experience",
     "Free quotes and transparent pricing",
     "Quality workmanship guaranteed",
-    "24/7 emergency service available",
-    "Eco-friendly materials and practices",
+    "Customer satisfaction guaranteed",
+    "High-quality materials and modern techniques",
   ];
 
   return (
