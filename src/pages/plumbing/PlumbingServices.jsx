@@ -7,11 +7,11 @@ import {
   CheckCircle,
   Clock,
   ShowerHeadIcon,
+  Phone,
 } from "lucide-react";
-import { useScrollAnimation } from "../../components/hooks/useScrollAnimation"; 
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 export default function PlumbingServices() {
-
   const [titleRef, titleVisible] = useScrollAnimation(0.1);
   const [gridRef, gridVisible] = useScrollAnimation(0.1);
   const [ctaRef, ctaVisible] = useScrollAnimation(0.1);
@@ -109,14 +109,16 @@ export default function PlumbingServices() {
     },
   ];
 
- return (
+  return (
     <div className="py-20 bg-gradient-to-b from-white to-primary-faint w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div 
+        <div
           ref={titleRef}
           className={`text-center mb-16 transition-all duration-1000 ${
-            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            titleVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
           }`}
         >
           <div className="inline-block bg-primary-100 text-primary-600 rounded-full px-4 py-2 mb-4 font-semibold text-sm">
@@ -132,10 +134,12 @@ export default function PlumbingServices() {
         </div>
 
         {/* Desktop/Tablet: Grid Layout */}
-        <div 
+        <div
           ref={gridRef}
           className={`hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
-            gridVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            gridVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
           }`}
         >
           {services.map((service, index) => (
@@ -179,10 +183,10 @@ export default function PlumbingServices() {
                   ))}
                 </div>
 
-                {/* CTA Button */}
+                {/* CTA Button
                 <button className="mt-6 w-full bg-secondary-500 hover:bg-secondary-600 text-white py-3 rounded-lg font-semibold transition-all transform hover:scale-105">
                   Get Quote
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
@@ -236,9 +240,9 @@ export default function PlumbingServices() {
                   </div>
 
                   {/* CTA Button */}
-                  <button className="w-full bg-secondary-500 hover:bg-secondary-600 text-white py-2.5 rounded-lg font-semibold text-sm transition-all">
+                  {/* <button className="w-full bg-secondary-500 hover:bg-secondary-600 text-white py-2.5 rounded-lg font-semibold text-sm transition-all">
                     Get Quote
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
@@ -246,10 +250,12 @@ export default function PlumbingServices() {
         </div>
 
         {/* Bottom CTA */}
-        <div 
+        <div
           ref={ctaRef}
-          className={`mt-16 text-center bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-10 text-white shadow-2xl transition-all duration-1000 delay-300 ${
-            ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          className={`mt-16 text-center bg-gradient-to-r from-primary-500 to-primary-600 rounded-3xl p-10 text-white shadow-2xl transition-all duration-1000 delay-300 ${
+            ctaVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-10"
           }`}
         >
           <h3 className="text-3xl font-bold mb-4">Need a Plumber Today?</h3>
@@ -257,18 +263,24 @@ export default function PlumbingServices() {
             Fast, reliable plumbing services across Aldershot and surrounding
             areas
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
-              <Clock className="w-5 h-5" />
-              Book Now
-            </button>
-            <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30">
-              Emergency Service
-            </button>
+
+          <div className="flex justify-center">
+            {/* Ripple Glow Button Wrapper */}
+            <div className="relative inline-block">
+              
+
+              {/* Button */}
+              <a
+                href="tel:+447453263938"
+                className="relative bg-red-600 hover:bg-red-700 text-white px-10 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Emergency Call
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-
 }

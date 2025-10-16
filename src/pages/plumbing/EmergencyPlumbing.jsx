@@ -36,11 +36,12 @@ export default function EmergencyPlumbing() {
       response: "Fast diagnosis",
     },
     {
-      icon: <AlertCircle className="w-8 h-8" />,
-      title: "Gas Leaks",
+      icon: <Droplets className="w-8 h-8" />,
+      title: "Overflow Issues",
       description:
-        "Critical gas leak detection and repair by Gas Safe engineers",
-      response: "Immediate callout",
+      "Quick action for overflowing toilets, sinks, or appliances to prevent water damage",
+    response: "Immediate assistance",
+
     },
   ];
 

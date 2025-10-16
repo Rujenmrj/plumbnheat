@@ -1,10 +1,12 @@
 import { Droplets, Wrench, Phone, Clock, Shield, Zap } from "lucide-react";
-import { useScrollAnimation} from "../../components/hooks/useScrollAnimation"
+import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
   const [heroRef, heroVisible] = useScrollAnimation(0.1);
+  const navigate = useNavigate();
 
- return (
+  return (
     <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 text-white overflow-hidden w-full">
       {/* Animated background pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -38,10 +40,10 @@ export default function HeroSection() {
         </div>
       </div>
 
-      <div 
+      <div
         ref={heroRef}
         className={`relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 transition-all duration-1000 ${
-          heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          heroVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -94,13 +96,26 @@ export default function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
-                <Phone className="w-5 h-5" />
-                Call: 0800 123 4567
-              </button>
-              <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30">
-                Book Online
+            <div className="flex flex-row flex-wrap gap-4 mt-8">
+              {/* Call Now Button with Ripple Glow */}
+              <div className="relative inline-block">
+                
+
+                <a
+                  href="tel:+447453263938"
+                  className="relative bg-white hover:bg-white/90 text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform shadow-lg flex items-center gap-2"
+                >
+                  <Phone className="w-5 h-5" />
+                  Call Now: +44 7453 263938
+                </a>
+              </div>
+
+              {/* Free Quote Button */}
+              <button
+                onClick={() => navigate("/contact")}
+                className="flex items-center cursor-pointer justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"
+              >
+                Free Quote
               </button>
             </div>
           </div>
