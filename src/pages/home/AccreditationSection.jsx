@@ -39,7 +39,7 @@ export default function AccreditationSection() {
             alt="Gas Safe Register"
             className="w-40 h-auto mb-2 rounded-2xl"
           />
-          <p className="text-sm text-gray-600">Register No: 961318</p>
+          <p className="text-sm text-gray-700">Register No: 961318</p>
         </div>
       </div>
     </section>

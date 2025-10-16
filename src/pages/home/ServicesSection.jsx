@@ -37,7 +37,7 @@ export default function ServicesSection() {
 
   const services = [
     {
-      title: "Plumbing Repairs",
+      title: "Plumbing Solutions",
       description:
         "From leaky taps to burst pipes, our expert plumbers provide fast and reliable repair solutions for your home or business.",
       image: "/home/plumbing.png",
@@ -58,7 +58,7 @@ export default function ServicesSection() {
       link: "/services/construction",
     },
     {
-      title: "Professional Catering",
+      title: "Commercial Catering",
       description:
         "Professional plumbing and heating installations for new homes, renovations, and commercial properties — done right from the ground up.",
       image: "/home/catering.jpg",
