@@ -161,11 +161,11 @@ export default function HeroSection() {
               {/* Call Now Button with Ripple Glow */}
               <div className="relative inline-block">
                 <a
-                  href="tel:+447453263938"
+                  href="tel:+447466453808"
                   className="relative bg-white hover:bg-white/90 text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all transform shadow-lg flex items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  Call Now: +44 7453 263938
+                  Call Now: +44 7466 453808
                 </a>
               </div>
 

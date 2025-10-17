@@ -269,9 +269,9 @@ export default function HeatingServices() {
               <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-30 blur-lg animate-pulse"></span> */}
 
               <a
-                href="tel:+447453263938"
+                href="tel:+447466453808"
                 className="relative bg-primary-500 hover:bg-primary-600
-        text-white px-8 py-4 rounded-lg font-semibold text-lg 
+        text-white px-8 py-4 cursor-pointer rounded-lg font-semibold text-lg 
         transition-all transform hover:scale-105 shadow-lg flex 
         items-center justify-center gap-2"
               >

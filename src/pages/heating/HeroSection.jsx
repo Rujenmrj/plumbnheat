@@ -204,20 +204,20 @@ export default function HeroSection() {
                 <span className="absolute inset-0 rounded-lg bg-white opacity-30 blur-lg animate-pulse"></span> */}
 
                 <a
-                  href="tel:+447453263938"
+                  href="tel:+447466453808"
                   className="relative bg-white hover:bg-white/90
        text-primary-500 px-8 py-4 rounded-lg font-semibold text-lg
        transition-all transform hover:scale-105 shadow-lg flex 
        items-center gap-2"
                 >
                   <Phone className="w-5 h-5" />
-                  Call Now: +44 7453 263938
+                  Call Now: +44 7466 453808
                 </a>
               </div>
 
               {/* Free Quote Button */}
               <button
-                className="flex items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"
+                className="flex cursor-pointer items-center justify-center bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all border-2 border-white/30 gap-2"
                 onClick={() => navigate("/contact")}
               >
                 Free Quote

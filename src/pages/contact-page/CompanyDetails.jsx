@@ -1,5 +1,5 @@
 import React from 'react'
-import { Phone, Mail, ShieldCheck, MapPin } from "lucide-react";
+import { Phone, Mail, ShieldCheck, MapPin, PhoneCall, Smartphone, Globe } from "lucide-react";
 import { useScrollAnimation } from '../../components/hooks/useScrollAnimation';
 
 
@@ -18,12 +18,21 @@ const CompanyDetails = () => {
             Company Details
           </h2>
 
-          <div className="flex items-center gap-3">
-            <Phone className="w-6 h-6 text-gray-600 flex-shrink-0" />
-            <span className="text-gray-600 text-lg font-medium">
-              +44 1234 567890
-            </span>
-          </div>
+          {/* Mobile */}
+        <div className="flex items-center gap-3">
+          <Smartphone className="w-6 h-6 text-gray-600 flex-shrink-0" />
+          <span className="text-gray-600 text-lg font-medium">
+            Mobile: +44 7466 453808
+          </span>
+        </div>
+
+        {/* Landline */}
+        <div className="flex items-center gap-3">
+          <Phone className="w-6 h-6 text-gray-600 flex-shrink-0" />
+          <span className="text-gray-600 text-lg font-medium">
+            Landline: 01252 214135
+          </span>
+        </div>
 
           <div className="flex items-center gap-3">
             <Mail className="w-6 h-6 text-gray-600 flex-shrink-0" />
@@ -33,7 +42,7 @@ const CompanyDetails = () => {
           </div>
 
           <div className="flex items-center gap-3">
-            <ShieldCheck className="w-6 h-6 text-gray-600 flex-shrink-0" />
+            <Globe className="w-6 h-6 text-gray-600 flex-shrink-0" />
             <a
               href="https://www.weplumbnheat.co.uk"
               target="_blank"
