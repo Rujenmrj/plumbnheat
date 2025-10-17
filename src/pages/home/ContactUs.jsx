@@ -1,8 +1,9 @@
 import React from "react";
-import { Phone, Mail, CheckCircle } from "lucide-react";
+import { Phone, Mail, CheckCircle, PhoneCall, Smartphone } from "lucide-react";
 import Form from "../../components/Form";
 import Banner from "../../components/Banner";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
+import { IoCallSharp } from "react-icons/io5";
 
 export default function ContactUs() {
   const [ref, isVisible] = useScrollAnimation(0.1);
@@ -45,7 +46,7 @@ export default function ContactUs() {
             
 
             {/* Google Map */}
-            <div className="w-full h-64 rounded-2xl overflow-hidden shadow-md">
+            <div className="w-full h-68 rounded-2xl overflow-hidden shadow-md">
               <iframe
                 title="Aldershot Location"
                 src="https://www.google.com/maps?q=Aldershot+Hampshire+GU11+3ST&output=embed"
@@ -59,7 +60,7 @@ export default function ContactUs() {
 
           {/* RIGHT SIDE: Emergency + Details + Promise */}
           <div
-            className={`flex-1 flex flex-col gap-8 transition-all duration-700 delay-400 ${
+            className={`flex-1 flex flex-col gap-5 transition-all duration-700 delay-400 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 translate-x-12"
@@ -81,8 +82,12 @@ export default function ContactUs() {
                 Company Details
               </h3>
               <div className="flex items-center gap-3">
+                <Smartphone className="w-5 h-5 text-primary" />
+                <span className="text-gray-700">Mobile: +44 7466 453808</span>
+              </div>
+              <div className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary" />
-                <span className="text-gray-700">+44 7453 263938</span>
+                <span className="text-gray-700">Landline: 01252 214135</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-primary" />

@@ -68,10 +68,10 @@ export default function WhyChooseUs() {
                     <span className="text-xl font-semibold">Call Us Now</span>
                   </div>
                   <a
-                    href="tel:+448001234567"
+                    href="tel:+447466453808"
                     className="block text-2xl sm:text-4xl font-extrabold text-white hover:text-secondary-100 transition-all duration-200"
                   >
-                    +44 7453 263938
+                    +44 7466 453808
                   </a>
                 </div>
               </div>
