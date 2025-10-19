@@ -37,7 +37,7 @@ export default function PlumbingServices() {
       title: "Bathroom Installation",
       description:
         "Complete bathroom installations and renovations. Showers, baths, sinks, toilets fitted to perfection.",
-      color: "bg-primary-600",
+      color: "bg-primary-500",
       image:
         "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
       features: [
@@ -52,7 +52,7 @@ export default function PlumbingServices() {
       title: "Kitchen Plumbing",
       description:
         "Professional kitchen plumbing services. Sinks, taps, dishwashers, and washing machine installations.",
-      color: "bg-secondary-600",
+      color: "bg-secondary-500",
       image:
         "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
       features: [
@@ -97,7 +97,7 @@ export default function PlumbingServices() {
       title: "Pipe Work & Replacements",
       description:
         "Professional pipe work installations and replacements. Copper, plastic, and modern materials.",
-      color: "bg-primary-600",
+      color: "bg-primary-500",
       image:
         "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=800&q=80",
       features: [

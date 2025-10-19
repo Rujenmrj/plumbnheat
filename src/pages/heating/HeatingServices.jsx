@@ -39,7 +39,7 @@ export default function HeatingServices() {
       title: "Boiler Repairs",
       description:
         "Fast and reliable boiler repairs with same-day service. Qualified engineers fix all makes and models with genuine parts.",
-      color: "bg-primary-600",
+      color: "bg-primary-500",
       image:
         "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
       features: [
@@ -54,7 +54,7 @@ export default function HeatingServices() {
       title: "Boiler Servicing",
       description:
         "Annual boiler servicing to keep your system running efficiently and safely. Maintain warranty and reduce breakdowns.",
-      color: "bg-secondary-600",
+      color: "bg-secondary-500",
       image:
         "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
       features: [
@@ -99,7 +99,7 @@ export default function HeatingServices() {
       title: "Emergency Repairs",
       description:
         "24/7 emergency heating repairs when you need us most. No call-out charges during business hours.",
-      color: "bg-primary-600",
+      color: "bg-primary-500",
       image:
         "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
       features: [

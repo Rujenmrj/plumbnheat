@@ -24,7 +24,7 @@ export default function CateringServices() {
       title: "Commercial Kitchen Gas Installation",
       description:
         "Safe and compliant gas installation for commercial kitchens, ensuring efficiency and reliability for all your appliances.",
-      color: "bg-secondary-500",
+      color: "bg-primary-500",
       image:
         "https://plus.unsplash.com/premium_photo-1661931341893-d5146d92f23d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071",
       features: [
@@ -39,7 +39,7 @@ export default function CateringServices() {
       title: "Gas Appliance Servicing & Repair",
       description:
         "Comprehensive maintenance and repair for all gas appliances to ensure safe and efficient performance.",
-      color: "bg-primary-600",
+      color: "bg-secondary-500",
       image:
         "https://plus.unsplash.com/premium_photo-1661921394349-9e3f394d80da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
@@ -54,7 +54,7 @@ export default function CateringServices() {
       title: "New Pipework & Gas Interlock Systems",
       description:
         "Professional design and installation of pipework and gas interlock systems meeting the latest safety standards.",
-      color: "bg-secondary-600",
+      color: "bg-primary-500",
       image:
         "https://plus.unsplash.com/premium_photo-1682144538950-d2595484bc07?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
@@ -69,7 +69,7 @@ export default function CateringServices() {
       title: "CP42 Gas Safety Certification",
       description:
         "We issue CP42 certificates after thorough inspection and testing of your commercial kitchen gas installation.",
-      color: "bg-primary-500",
+      color: "bg-secondary-500",
       image:
         "https://images.unsplash.com/photo-1742112125567-3e8967bad60f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
@@ -84,7 +84,7 @@ export default function CateringServices() {
       title: "Extractor Fan & Ventilation Compliance",
       description:
         "Installation and compliance testing of extraction and ventilation systems for optimal air quality and safety.",
-      color: "bg-secondary-500",
+      color: "bg-primary-500",
       image:
         "https://plus.unsplash.com/premium_photo-1682126035460-bb956013473b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071",
       features: [
@@ -99,7 +99,7 @@ export default function CateringServices() {
       title: "Emergency Call-Outs & Diagnostics",
       description:
         "Rapid response to gas leaks, breakdowns, and system faults. We ensure minimal downtime for your kitchen.",
-      color: "bg-primary-600",
+      color: "bg-secondary-500",
       image:
         "https://plus.unsplash.com/premium_photo-1664301135901-383935f2104f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
