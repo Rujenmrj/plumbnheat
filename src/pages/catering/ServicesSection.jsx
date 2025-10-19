@@ -1,19 +1,19 @@
+import React from "react";
 import {
-  Flame,
-  Thermometer,
-  Droplets,
+  Utensils,
   Wrench,
   Shield,
-  Clock,
-  CheckCircle,
-  TrendingDown,
+  Fan,
+  FileCheck,
+  AlertTriangle,
   Phone,
-  Leaf,
-  Siren,
+  Flame,
+  Pipette,
+  CheckCircle,
 } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
-export default function HeatingServices() {
+export default function CateringServices() {
   const [headerRef, headerVisible] = useScrollAnimation(0.1);
   const [servicesRef, servicesVisible] = useScrollAnimation(0.1);
   const [ctaRef, ctaVisible] = useScrollAnimation(0.1);
@@ -21,98 +21,99 @@ export default function HeatingServices() {
   const services = [
     {
       icon: <Flame className="w-12 h-12" />,
-      title: "Boiler Installation",
+      title: "Commercial Kitchen Gas Installation",
       description:
-        "Expert installation of new boilers from leading brands. Energy-efficient models with extended warranties and professional fitting.",
+        "Safe and compliant gas installation for commercial kitchens, ensuring efficiency and reliability for all your appliances.",
       color: "bg-secondary-500",
       image:
-        "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1661931341893-d5146d92f23d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071",
       features: [
-        "All major brands",
-        "10-year warranty",
-        "Finance available",
-        "Same-day installation",
+        "Gas Safe certified engineers",
+        "High-capacity pipe systems",
+        "Complete installation & testing",
+        "Safety-first standards",
       ],
     },
     {
       icon: <Wrench className="w-12 h-12" />,
-      title: "Boiler Repairs",
+      title: "Gas Appliance Servicing & Repair",
       description:
-        "Fast and reliable boiler repairs with same-day service. Qualified engineers fix all makes and models with genuine parts.",
+        "Comprehensive maintenance and repair for all gas appliances to ensure safe and efficient performance.",
       color: "bg-primary-600",
       image:
-        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1661921394349-9e3f394d80da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
-        "Same-day service",
-        "All makes & models",
-        "12-month guarantee",
-        "Upfront pricing",
+        "All major commercial brands",
+        "Preventative maintenance",
+        "Genuine replacement parts",
+        "Emergency repairs available",
       ],
     },
     {
-      icon: <Thermometer className="w-12 h-12" />,
-      title: "Boiler Servicing",
+      icon: <Pipette className="w-12 h-12" />,
+      title: "New Pipework & Gas Interlock Systems",
       description:
-        "Annual boiler servicing to keep your system running efficiently and safely. Maintain warranty and reduce breakdowns.",
+        "Professional design and installation of pipework and gas interlock systems meeting the latest safety standards.",
       color: "bg-secondary-600",
       image:
-        "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1682144538950-d2595484bc07?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
-        "Annual check-up",
-        "Safety inspection",
-        "Efficiency test",
-        "Gas Safe certified",
+        "Bespoke pipework design",
+        "BS6173 compliant systems",
+        "Automatic shut-off valves",
+        "Pressure testing and certification",
       ],
     },
     {
-      icon: <Droplets className="w-12 h-12" />,
-      title: "Central Heating",
+      icon: <FileCheck className="w-12 h-12" />,
+      title: "CP42 Gas Safety Certification",
       description:
-        "Complete central heating installations, upgrades, and power flushing. Radiator installation and smart thermostat fitting.",
+        "We issue CP42 certificates after thorough inspection and testing of your commercial kitchen gas installation.",
       color: "bg-primary-500",
       image:
-        "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=800&q=80",
+        "https://images.unsplash.com/photo-1742112125567-3e8967bad60f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
-        "Full system design",
-        "Radiator upgrades",
-        "Smart controls",
-        "Power flushing",
+        "Full inspection & testing",
+        "Gas Safe registered",
+        "Certificate valid for 12 months",
+        "Compliance documentation",
       ],
     },
     {
-      icon: <Leaf className="w-12 h-12" />,
-      title: "Energy Efficiency",
+      icon: <Fan className="w-12 h-12" />,
+      title: "Extractor Fan & Ventilation Compliance",
       description:
-        "Improve your home's energy efficiency with modern heating systems. Lower bills and reduce your carbon footprint.",
+        "Installation and compliance testing of extraction and ventilation systems for optimal air quality and safety.",
       color: "bg-secondary-500",
       image:
-        "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1682126035460-bb956013473b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2071",
       features: [
-        "Save up to 30%",
-        "Eco-friendly",
-        "Smart heating",
-        "A-rated boilers",
+        "Commercial extractor fans",
+        "Airflow compliance tests",
+        "Duct cleaning and upgrades",
+        "Meets HSE ventilation standards",
       ],
     },
     {
-      icon: <Siren className="w-12 h-12" />,
-      title: "Emergency Repairs",
+      icon: <AlertTriangle className="w-12 h-12" />,
+      title: "Emergency Call-Outs & Diagnostics",
       description:
-        "24/7 emergency heating repairs when you need us most. No call-out charges during business hours.",
+        "Rapid response to gas leaks, breakdowns, and system faults. We ensure minimal downtime for your kitchen.",
       color: "bg-primary-600",
       image:
-        "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1664301135901-383935f2104f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: [
-        "24/7 available",
-        "Rapid response",
+        "24/7 emergency response",
+        "Fault detection and repairs",
         "No hidden fees",
-        "All emergencies",
+        "Safety guaranteed",
       ],
     },
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-b from-white to-primary-faint w-full">
+    <div className="py-20 bg-gradient-to-b from-white to-secondary-50 w-full">
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div
@@ -123,19 +124,20 @@ export default function HeatingServices() {
               : "opacity-0 translate-y-10"
           }`}
         >
+          
           <div className="inline-block bg-secondary-100 text-secondary-600 rounded-full px-4 py-2 mb-4 font-semibold text-sm">
-            HEATING SOLUTIONS
+            COMMERCIAL CATERING SOLUTIONS
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-700 mb-4">
-            Our Heating Services
+            Our Commercial Catering Services
           </h2>
           <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-            From boiler installations to emergency repairs, we provide
-            comprehensive heating solutions with Gas Safe registered engineers
+            Reliable gas, ventilation, and safety services for professional
+            kitchens — all carried out by certified engineers.
           </p>
         </div>
 
-        {/* Desktop/Tablet: Grid Layout */}
+        {/* Grid Layout */}
         <div
           ref={servicesRef}
           className={`hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-200 ${
@@ -149,7 +151,6 @@ export default function HeatingServices() {
               key={index}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2 border border-gray-200 group"
             >
-              {/* Image Section */}
               <div className="relative h-56 overflow-hidden">
                 <img
                   src={service.image}
@@ -169,13 +170,10 @@ export default function HeatingServices() {
                 </div>
               </div>
 
-              {/* Content Section */}
               <div className="p-6">
                 <p className="text-gray-600 leading-relaxed mb-4">
                   {service.description}
                 </p>
-
-                {/* Features List */}
                 <div className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-sm">
@@ -184,14 +182,12 @@ export default function HeatingServices() {
                     </div>
                   ))}
                 </div>
-
-          
               </div>
             </div>
           ))}
         </div>
 
-        {/* Mobile: Horizontal Scroll */}
+         {/* Mobile: Horizontal Scroll */}
         <div className="md:hidden overflow-x-auto scrollbar-hide -mx-4 px-4">
           <div className="flex gap-4 pb-4">
             {services.map((service, index) => (
@@ -243,7 +239,7 @@ export default function HeatingServices() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* CTA */}
         <div
           ref={ctaRef}
           className={`mt-16 text-center bg-gradient-to-r from-secondary-500 to-secondary-600 rounded-3xl p-10 text-white shadow-2xl transition-all duration-1000 delay-400 ${
@@ -253,29 +249,20 @@ export default function HeatingServices() {
           }`}
         >
           <h3 className="text-3xl font-bold mb-4">
-            Need Heating Service Today?
+            Need Commercial Catering Support?
           </h3>
           <p className="text-xl text-secondary-100 mb-6">
-            Our Gas Safe engineers are ready to help with any heating issue
+            Our certified engineers are ready for installations, servicing, or
+            emergency call-outs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* Emergency Call Out Button with Ripple Glow */}
-            <div className="relative inline-block">
-              {/* Ripple Glow Animation
-              <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-40 animate-ping blur-md"></span>
-              <span className="absolute inset-0 rounded-lg bg-primary-500 opacity-30 blur-lg animate-pulse"></span> */}
-
-              <a
-                href="tel:+447466453808"
-                className="relative bg-primary-500 hover:bg-primary-600
-        text-white px-8 py-4 cursor-pointer rounded-lg font-semibold text-lg 
-        transition-all transform hover:scale-105 shadow-lg flex 
-        items-center justify-center gap-2"
-              >
-                Emergency Call Out
-                <Phone className="w-5 h-5" />
-              </a>
-            </div>
+          <div className="flex justify-center">
+            <a
+              href="tel:+447466453808"
+              className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 transition-all transform hover:scale-105 shadow-lg"
+            >
+              Call Us Now
+              <Phone className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </div>
