@@ -8,6 +8,7 @@ import TermsOfService from "./pages/term-of-service/index.jsx";
 import ConstructionPage from "./pages/construction/index.jsx";
 import Heating from "./pages/heating/index.jsx";
 import Plumbing from "./pages/plumbing/index.jsx";
+import Catering from "./pages/catering/index.jsx";
 const AppRoutes = () => {
   return (
     <Routes>
@@ -18,6 +19,7 @@ const AppRoutes = () => {
       <Route path="/services/construction" element={<ConstructionPage />} />
       <Route path="/services/heating" element={<Heating />} />
       <Route path="/services/plumbing" element={<Plumbing />} />
+      <Route path="/services/catering" element={<Catering />} />
       {/* 404 Catch-all route */}
       <Route path="/contact" element={<Contact />} />
       <Route path="*" element={<NotFound />} /> {/* ✅ Works now */}
