@@ -1,6 +1,7 @@
-import { Home, Droplet, Wrench, Clock, Award, Building } from "lucide-react";
+import { Home, Droplet, Wrench, Clock, Award, Building, Building2, BrickWall, Paintbrush, Bath } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 import { CheckCircle } from "lucide-react";
+import { MdBathroom } from "react-icons/md";
 
 export default function ServicesGrid() {
   const [titleRef, titleVisible] = useScrollAnimation(0.1);
@@ -32,23 +33,23 @@ export default function ServicesGrid() {
       title: "Kitchen Installations",
       description:
         "Upgrade your kitchen with stylish, functional, and long-lasting installations tailored to your needs.",
-      color: "bg-primary-600",
+      color: "bg-primary-500",
       image:
         "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=800&q=80",
       features: ["Custom cabinets", "Countertops & sinks", "Appliance installation", "Durable finishes"],
     },
     {
-      icon: <Droplet className="w-12 h-12" />,
+      icon: <Bath className="w-12 h-12" />,
       title: "Bathroom Renovations",
       description:
         "Transform your bathroom into a modern, relaxing space with our expert renovation and design service.",
-      color: "bg-secondary-600",
+      color: "bg-secondary-500",
       image:
         "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80",
       features: ["Showers & baths", "Tile & flooring", "Plumbing upgrades", "Modern fixtures"],
     },
     {
-      icon: <Clock className="w-12 h-12" />,
+      icon: <BrickWall className="w-12 h-12" />,
       title: "Roofing & Brickwork",
       description:
         "Reliable roofing, bricklaying, and structural repair services that enhance and protect your property.",
@@ -58,7 +59,7 @@ export default function ServicesGrid() {
       features: ["Roof repairs & installation", "Chimney work", "Bricklaying & masonry", "Weatherproofing"],
     },
     {
-      icon: <Award className="w-12 h-12" />,
+      icon: <Paintbrush className="w-12 h-12" />,
       title: "Painting & Plastering",
       description:
         "High-quality interior and exterior painting, decorating, and plastering with smooth, professional finishes.",

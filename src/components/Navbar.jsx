@@ -28,9 +28,9 @@ export default function Navbar() {
 
   const dropdownLinks = [
     { icon: Flame, label: "Heating", to: "/services/heating" },
+    { icon: ChefHat, label: "Catering", to: "/services/catering" },
     { icon: Droplet, label: "Plumbing", to: "/services/plumbing" },
     { icon: Hammer, label: "Construction", to: "/services/construction" },
-    { icon: ChefHat, label: "Catering", to: "/services/catering" },
   ];
 
   // Update underline based on active route
