@@ -128,7 +128,7 @@ export default function HeroSection() {
             >
               <button className="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
-                Call: 01252 214135
+                Call: +44 7466 453808
               </button>
               <button
                 onClick={() => navigate("/contact")}
@@ -203,7 +203,7 @@ export default function HeroSection() {
                 </div>
                 <div className="border-l-2 border-gray-200 pl-6">
                   <div className="text-secondary-600 font-bold text-2xl">
-                    25+
+                    15+
                   </div>
                   <div className="text-gray-600 text-sm">Years Experience</div>
                 </div>
