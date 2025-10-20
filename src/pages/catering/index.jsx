@@ -1,15 +1,15 @@
-import React from 'react'
-
-import FAQSection from '../../components/FAQSection';
-import CateringServices from './ServicesSection';
-
+import React from "react";
+import GasSafeCertification from "../heating/GasSafeCertification";
+import FAQSection from "../../components/FAQSection";
+import CateringServices from "./ServicesSection";
+import HeroSection from "./HeroSection";
 
 export default function Catering() {
   return (
     <div>
-      
+      <HeroSection />
       <CateringServices />
-     
+      <GasSafeCertification />
       <FAQSection />
     </div>
   );
