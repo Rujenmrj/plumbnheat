@@ -6,10 +6,12 @@ import {
   Shield,
   Flame,
 } from "lucide-react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   const navigate = useNavigate();
+
   return (
     <div className="relative bg-gradient-to-br from-primary-600 to-primary-700 text-white overflow-hidden w-full">
       {/* Animated background pattern */}
@@ -22,11 +24,11 @@ export default function HeroSection() {
         ></div>
       </div>
 
-      {/* Floating animated elements */}
+      {/* Floating animated icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute top-20 left-10 animate-bounce"
-          style={{ animationDuration: "3s", animationDelay: "0s" }}
+          style={{ animationDuration: "3s" }}
         >
           <UtensilsCrossed className="w-16 h-16 text-primary-300 opacity-20" />
         </div>
@@ -44,33 +46,57 @@ export default function HeroSection() {
         </div>
       </div>
 
+      {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div>
-            <div className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-5 py-3 mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <motion.div
+              className="inline-flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-5 py-3 mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
               <div className="bg-white rounded-full p-1">
                 <Shield className="w-5 h-5 text-secondary-600" />
               </div>
               <span className="text-sm font-bold">
                 Gas Safe Registered • Commercial Certified • Fully Insured
               </span>
-            </div>
+            </motion.div>
 
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+            <motion.h1
+              className="text-4xl md:text-6xl font-bold mb-6 leading-tight"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.8 }}
+            >
               Commercial Kitchen
               <br />
               <span className="text-secondary-300">Equipment Specialists</span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-xl md:text-2xl mb-8 text-primary-100 leading-relaxed">
+            <motion.p
+              className="text-xl md:text-2xl mb-8 text-primary-100 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+            >
               Expert installation, maintenance, and repair of commercial
               catering equipment for restaurants, cafes, hotels, and food
               businesses
-            </p>
+            </motion.p>
 
-            {/* Quick Features */}
-            <div className="grid grid-cols-2 gap-4 mb-8">
+            <motion.div
+              className="grid grid-cols-2 gap-4 mb-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.7 }}
+            >
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 backdrop-blur-sm rounded-lg p-2">
                   <Clock className="w-6 h-6" />
@@ -91,10 +117,15 @@ export default function HeroSection() {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
+            <motion.div
+              className="flex flex-col sm:flex-row gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 }}
+            >
               <button className="bg-secondary-500 hover:bg-secondary-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call: 01252 214135
@@ -105,59 +136,64 @@ export default function HeroSection() {
               >
                 Request Survey
               </button>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* Right Content - Service Highlights */}
-          <div className="relative">
+          {/* Right Content (cards) */}
+          <motion.div
+            className="relative"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1, duration: 1 }}
+          >
             <div className="grid grid-cols-2 gap-4">
-              {/* Card 1 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Flame className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Gas Equipment</h3>
-                <p className="text-sm text-primary-100">
-                  Ovens, ranges, fryers installation
-                </p>
-              </div>
-
-              {/* Card 2 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
-                <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <UtensilsCrossed className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Kitchen Design</h3>
-                <p className="text-sm text-primary-100">
-                  Full commercial kitchen setup
-                </p>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <ChefHat className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">Maintenance</h3>
-                <p className="text-sm text-primary-100">
-                  Planned & reactive servicing
-                </p>
-              </div>
-
-              {/* Card 4 */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all mt-8">
-                <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-                  <Clock className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="font-bold text-lg mb-2">24/7 Support</h3>
-                <p className="text-sm text-primary-100">
-                  Emergency breakdown service
-                </p>
-              </div>
+              {[
+                {
+                  icon: <Flame className="w-7 h-7 text-white" />,
+                  title: "Gas Equipment",
+                  desc: "Ovens, ranges, fryers installation",
+                },
+                {
+                  icon: <UtensilsCrossed className="w-7 h-7 text-white" />,
+                  title: "Kitchen Design",
+                  desc: "Full commercial kitchen setup",
+                },
+                {
+                  icon: <ChefHat className="w-7 h-7 text-white" />,
+                  title: "Maintenance",
+                  desc: "Planned & reactive servicing",
+                },
+                {
+                  icon: <Clock className="w-7 h-7 text-white" />,
+                  title: "24/7 Support",
+                  desc: "Emergency breakdown service",
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  className={`bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all ${
+                    i % 2 !== 0 ? "mt-8" : ""
+                  }`}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 1.2 + i * 0.1 }}
+                >
+                  <div className="bg-secondary-500 w-12 h-12 rounded-xl flex items-center justify-center mb-4">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-bold text-lg mb-2">{item.title}</h3>
+                  <p className="text-sm text-primary-100">{item.desc}</p>
+                </motion.div>
+              ))}
             </div>
 
             {/* Trust Badge */}
-            <div className="mt-6 bg-white rounded-2xl p-6 shadow-2xl">
+            <motion.div
+              className="mt-6 bg-white rounded-2xl p-6 shadow-2xl"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.8, duration: 1 }}
+            >
               <div className="flex items-center justify-between">
                 <div>
                   <div className="text-secondary-600 font-bold text-2xl">
@@ -178,8 +214,8 @@ export default function HeroSection() {
                   <div className="text-gray-600 text-sm">Uptime Rate</div>
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 
