@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { ChevronLeft, ChevronRight, Phone, PhoneCall, Smartphone } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Phone,
+  PhoneCall,
+  Smartphone,
+} from "lucide-react";
 import { BsTelephone } from "react-icons/bs";
 
 const ImageSlider = ({ slides, autoPlayInterval = 5000 }) => {
@@ -157,8 +163,6 @@ const slides = [
   },
 ];
 
- 
-
 export default function HeroSection() {
   const [ref, isVisible] = useScrollAnimation(0.2);
 
@@ -192,8 +196,7 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-
-             <a
+            <a
               href="tel:+447466453808"
               className="inline-flex items-center justify-center bg-secondary-500 hover:bg-secondary-400 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
             >
@@ -201,23 +204,18 @@ export default function HeroSection() {
               Call Mobile: +44 7466 453808
             </a>
 
-          <a
+            <a
               href="tel:01252214135"
               className="inline-flex items-center justify-center bg-primary-600 hover:bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 shadow-md hover:shadow-lg"
             >
               <Phone className="w-5 h-5 mr-2" />
               Landline: 01252 214135
             </a>
-
           </div>
-        
-
-
-         
 
           <div className="mt-10 flex justify-center md:justify-start gap-8 text-primary-700">
             {[
-              { num: "1200+", label: "Happy Customers", delay: 200 },
+              { num: "Trusted", label: "Trusted & Certified", delay: 200 },
               { num: "15+", label: "Years Experience", delay: 400 },
               { num: "24/7", label: "Service", delay: 600 },
             ].map((stat, idx) => (

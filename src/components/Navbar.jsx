@@ -8,6 +8,7 @@ import {
   Droplet,
   Hammer,
   ChefHat,
+  Factory,
 } from "lucide-react";
 
 export default function Navbar() {
@@ -28,7 +29,7 @@ export default function Navbar() {
 
   const dropdownLinks = [
     { icon: Flame, label: "Heating", to: "/services/heating" },
-    { icon: ChefHat, label: "Catering", to: "/services/catering" },
+    { icon: Factory, label: "Cmmercial Catering", to: "/services/catering" },
     { icon: Droplet, label: "Plumbing", to: "/services/plumbing" },
     { icon: Hammer, label: "Construction", to: "/services/construction" },
   ];
