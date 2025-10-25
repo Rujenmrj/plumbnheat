@@ -1,4 +1,3 @@
-import React from "react";
 import Accordion from "./Accordion";
 import { Plus } from "lucide-react";
 import { useScrollAnimation } from "../components/hooks/useScrollAnimation";

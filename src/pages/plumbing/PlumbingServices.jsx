@@ -5,7 +5,6 @@ import {
   PipetteIcon as Pipe,
   Hammer,
   CheckCircle,
-  Clock,
   ShowerHeadIcon,
   Phone,
 } from "lucide-react";

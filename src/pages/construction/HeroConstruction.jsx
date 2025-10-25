@@ -1,4 +1,3 @@
-import { nav } from "framer-motion/client";
 import {
   Wrench,
   Home,
@@ -13,7 +12,6 @@ import {
   ArrowRight,
   PhoneCallIcon,
 } from "lucide-react";
-import { use } from "react";
 import { useNavigate } from "react-router-dom";
 import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 

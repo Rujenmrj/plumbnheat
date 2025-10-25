@@ -1,4 +1,3 @@
-import React from "react";
 import {useScrollAnimation} from "../../components/hooks/useScrollAnimation"
 
 const OurStorySection = () => {

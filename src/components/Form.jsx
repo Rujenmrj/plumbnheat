@@ -1,6 +1,3 @@
-// src/components/Form.jsx
-import React from "react";
-
 export default function Form({ title = "Contact Us", onSubmit }) {
   return (
     <div className="bg-white rounded-2xl shadow-md p-6 md:p-8 w-full">

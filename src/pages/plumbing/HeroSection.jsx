@@ -1,4 +1,4 @@
-import { Droplets, Wrench, Phone, Clock, Shield, Zap, Calendar, ToolCase, Pipette, Siren } from "lucide-react";
+import { Droplets, Wrench, Phone, Clock, Shield, Zap, Calendar, Pipette, Siren } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 import { useNavigate } from "react-router-dom";
 
