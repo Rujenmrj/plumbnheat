@@ -122,31 +122,33 @@ export default function Navbar() {
                       onMouseEnter={handleDropdownEnter}
                       onMouseLeave={handleDropdownLeave}
                     >
-                      <button className="flex items-center gap-1 hover:text-primary-300 transition-colors">
+                      <button className="flex items-center gap-1 hover:text-primary-300 transition-colors cursor-pointer">
                         <span>Services</span>
                         <ChevronDown className="w-4 h-4 mt-[2px]" />
                       </button>
 
-                      {/* Dropdown */}
-                      {showDropdown && (
-                        <div
-                          className="absolute top-full mt-2 left-0 w-64 bg-white rounded-lg shadow-lg py-2 border border-gray-100 z-50"
-                          onMouseEnter={handleDropdownEnter}
-                          onMouseLeave={handleDropdownLeave}
-                        >
-                          {dropdownLinks.map(({ icon: Icon, label, to }) => (
-                            <Link
-                              key={label}
-                              to={to}
-                              className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
-                              onClick={() => setShowDropdown(false)}
-                            >
-                              <Icon className="w-8 h-8 mr-3" />
-                              <span>{label}</span>
-                            </Link>
-                          ))}
-                        </div>
-                      )}
+                      {/* Dropdown with animation */}
+                      <div
+                        className={`absolute top-full mt-2 left-0 w-64 bg-white rounded-lg shadow-lg py-2 border border-gray-100 z-50 transform transition-all duration-300 ease-out origin-top ${
+                          showDropdown
+                            ? "opacity-100 scale-100 translate-y-0"
+                            : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+                        }`}
+                        onMouseEnter={handleDropdownEnter}
+                        onMouseLeave={handleDropdownLeave}
+                      >
+                        {dropdownLinks.map(({ icon: Icon, label, to }) => (
+                          <Link
+                            key={label}
+                            to={to}
+                            className="flex items-center px-4 py-3 hover:bg-primary-100 transition"
+                            onClick={() => setShowDropdown(false)}
+                          >
+                            <Icon className="w-8 h-8 mr-3" />
+                            <span>{label}</span>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   ) : (
                     <Link
@@ -210,7 +212,7 @@ export default function Navbar() {
             </button>
 
             {showDropdown && (
-              <div className="ml-4">
+              <div className="ml-4 transition-all duration-300 ease-out transform origin-top">
                 {dropdownLinks.map(({ icon: Icon, label, to }) => (
                   <Link
                     key={label}

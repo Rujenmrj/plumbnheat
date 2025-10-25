@@ -61,7 +61,7 @@ export default function ServicesSection() {
       title: "Commercial Catering",
       description:
         "Professional plumbing and heating installations for new homes, renovations, and commercial properties — done right from the ground up.",
-      image: "/home/catering.jpg",
+      image: "/home/commercial-catering.jpg",
       link: "/services/catering",
     },
   ];
@@ -140,11 +140,18 @@ export default function ServicesSection() {
                       alt={service.title}
                       className="w-full h-56 object-cover rounded-t-xl"
                     />
-                    <div className="p-6">
-                      <h3 className="text-xl font-semibold text-primary-600 mb-2">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-700">{service.description}</p>
+                    <div className="p-6 flex flex-col justify-between h-[230px]">
+                      <div>
+                        <h3 className="text-xl font-semibold text-primary-600 mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-700">{service.description}</p>
+                      </div>
+                      <div className="text-right mt-4">
+                        <span className="text-secondary-600 font-medium hover:underline">
+                          Learn More →
+                        </span>
+                      </div>
                     </div>
                   </a>
                 </div>
@@ -187,11 +194,18 @@ export default function ServicesSection() {
                 alt={service.title}
                 className="w-full h-56 object-cover rounded-t-xl"
               />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-primary-600 mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 mb-4">{service.description}</p>
+              <div className="p-6 flex flex-col justify-between h-[250px]">
+                <div>
+                  <h3 className="text-xl font-semibold text-primary-600 mb-2">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-700 mb-4">{service.description}</p>
+                </div>
+                <div className="text-right">
+                  <span className="text-primary-600 font-medium hover:underline">
+                    Learn More →
+                  </span>
+                </div>
               </div>
             </a>
           ))}

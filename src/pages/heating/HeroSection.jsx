@@ -93,7 +93,7 @@ export default function HeroSection() {
 
             <div className="bg-white/15 backdrop-blur-sm rounded-lg p-4 mb-6 border border-white/20">
               <p className="text-lg font-bold mb-1">
-                Prices starting from £1600
+                Prices starting from £1600 for Boiler Installations
               </p>
               <p className="text-sm text-secondary-100">
                 We also provide boiler servicing and landlord safety
