@@ -18,7 +18,6 @@ export default function Home() {
       <AreasWeCover />
       <ContactUs />
       <FAQSection />
-      {/* You can add more sections below later, like <ServicesPreview /> or <Testimonials /> */}
     </div>
   );
 }

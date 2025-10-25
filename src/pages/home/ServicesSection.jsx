@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const useScrollAnimation = (threshold = 0.15) => {
   const [isVisible, setIsVisible] = useState(false);
