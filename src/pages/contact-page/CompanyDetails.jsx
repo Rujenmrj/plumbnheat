@@ -1,5 +1,4 @@
-import React from 'react'
-import { Phone, Mail, ShieldCheck, MapPin, PhoneCall, Smartphone, Globe } from "lucide-react";
+import { Phone, Mail, MapPin, Smartphone, Globe } from "lucide-react";
 import { useScrollAnimation } from '../../components/hooks/useScrollAnimation';
 
 

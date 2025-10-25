@@ -1,5 +1,3 @@
-import React from "react";
-import GasSafeCertification from "../heating/GasSafeCertification";
 import FAQSection from "../../components/FAQSection";
 import CateringServices from "./ServicesSection";
 import HeroSection from "./HeroSection";

@@ -1,4 +1,4 @@
-import { Phone, Mail, CheckCircle, PhoneCall, Smartphone } from "lucide-react";
+import { Phone, Mail, CheckCircle, Smartphone } from "lucide-react";
 import Form from "../../components/Form";
 import Banner from "../../components/Banner";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";

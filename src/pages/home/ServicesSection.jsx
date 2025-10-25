@@ -59,7 +59,7 @@ export default function ServicesSection() {
     {
       title: "Commercial Catering",
       description:
-        "Professional plumbing and heating installations for new homes, renovations, and commercial properties — done right from the ground up.",
+        "Expert plumbing and heating services for commercial kitchens, ensuring safe, efficient, and reliable operation every day.",
       image: "/home/commercial-catering.jpg",
       link: "/services/catering",
     },

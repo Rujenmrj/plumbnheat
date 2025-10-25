@@ -1,5 +1,3 @@
-// src/pages/Contact.jsx
-import React from "react";
 import Form from "../../components/Form";
 import Banner from "../../components/Banner";
 import CompanyDetails from "./CompanyDetails";

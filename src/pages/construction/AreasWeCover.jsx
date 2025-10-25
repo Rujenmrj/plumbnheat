@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MapPin, CheckCircle } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 

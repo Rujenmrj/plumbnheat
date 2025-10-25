@@ -1,9 +1,6 @@
 import {
   Phone,
   Clock,
-  Zap,
-  AlertCircle,
-  Shield,
   CheckCircle,
   Droplets,
   Flame,

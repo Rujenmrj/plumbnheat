@@ -1,7 +1,6 @@
-import { Home, Droplet, Wrench, Clock, Award, Building, Building2, BrickWall, Paintbrush, Bath } from "lucide-react";
+import { Home, Droplet, Wrench, Building, BrickWall, Paintbrush, Bath } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 import { CheckCircle } from "lucide-react";
-import { MdBathroom } from "react-icons/md";
 
 export default function ServicesGrid() {
   const [titleRef, titleVisible] = useScrollAnimation(0.1);

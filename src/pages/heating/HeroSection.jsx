@@ -1,9 +1,7 @@
 import {
   Flame,
-  Droplets,
   Wrench,
   Phone,
-  Clock,
   Shield,
   Thermometer,
   UserCheck,
