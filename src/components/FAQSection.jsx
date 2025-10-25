@@ -42,8 +42,9 @@ const FAQSection = () => {
           Frequently Asked Questions
         </h2>
         <p className="text-[var(--color-gray-500)] mb-10">
-          Have questions about our plumbing, heating, or construction services?
-          Here are some of the most common things our customers ask us.
+          Have questions about our plumbing, heating, commercial catering or
+          construction services? Here are some of the most common things our
+          customers ask us.
         </p>
 
         <Accordion
