@@ -1,13 +1,5 @@
 import React from "react";
-import {
-  Clock,
-  Users,
-  ThumbsUp,
-  Wrench,
-  ShieldCheck,
-  Tag,
-  Star,
-} from "lucide-react";
+import { Clock, Users, ThumbsUp, ShieldCheck, Star } from "lucide-react";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
 
 const features = [

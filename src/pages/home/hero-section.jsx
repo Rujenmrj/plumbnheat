@@ -1,12 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-  Phone,
-  PhoneCall,
-  Smartphone,
-} from "lucide-react";
-import { BsTelephone } from "react-icons/bs";
+import { ChevronLeft, ChevronRight, Phone, Smartphone } from "lucide-react";
 
 const ImageSlider = ({ slides, autoPlayInterval = 5000 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);

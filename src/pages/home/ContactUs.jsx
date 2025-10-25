@@ -1,9 +1,7 @@
-import React from "react";
 import { Phone, Mail, CheckCircle, PhoneCall, Smartphone } from "lucide-react";
 import Form from "../../components/Form";
 import Banner from "../../components/Banner";
 import { useScrollAnimation } from "../../components/hooks/useScrollAnimation";
-import { IoCallSharp } from "react-icons/io5";
 
 export default function ContactUs() {
   const [ref, isVisible] = useScrollAnimation(0.1);
@@ -22,8 +20,8 @@ export default function ContactUs() {
             Get In Touch
           </h2>
           <p className="text-gray-700 text-base max-w-2xl mx-auto">
-            Ready to solve your plumbing, heating, or construction needs? Contact us
-            today for a free estimate or emergency service.
+            Ready to solve your plumbing, heating, or construction needs?
+            Contact us today for a free estimate or emergency service.
           </p>
         </div>
 
@@ -38,12 +36,11 @@ export default function ContactUs() {
             }`}
           >
             {/* Contact Form */}
-            
-              <Form
-                title="Contact Us"
-                onSubmit={(e) => console.log("Form Submitted!")}
-              />
-            
+
+            <Form
+              title="Contact Us"
+              onSubmit={(e) => console.log("Form Submitted!")}
+            />
 
             {/* Google Map */}
             <div className="w-full h-68 rounded-2xl overflow-hidden shadow-md">
@@ -95,7 +92,9 @@ export default function ContactUs() {
               </div>
               <div>
                 <p className="font-semibold text-gray-800">Service Area:</p>
-                <p className="text-gray-700">We cover parts of Hampshire and Surrey.</p>
+                <p className="text-gray-700">
+                  We cover parts of Hampshire and Surrey.
+                </p>
               </div>
               <div>
                 <p className="font-semibold text-gray-800">Business Hours:</p>
@@ -121,10 +120,6 @@ export default function ContactUs() {
                   <CheckCircle className="w-5 h-5 text-primary" />
                   Customer Needs First
                 </li>
-                {/* <li className="flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5 text-primary" />
-                  Licensed, insured, and bonded professionals
-                </li> */}
               </ul>
             </div>
           </div>
