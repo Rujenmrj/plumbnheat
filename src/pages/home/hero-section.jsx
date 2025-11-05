@@ -135,22 +135,22 @@ const slides = [
   },
   {
     image:
-      "https://media.istockphoto.com/id/2223571943/photo/plumbing-installation-in-residential-construction-project-near-completion-in-basement-area.webp?a=1&b=1&s=612x612&w=0&k=20&c=pMRlErF91oInd3qjWnKjCdRthJdqdydPV0gTsdvDcNE=",
-    link: "/services/plumbing",
+      "/plumbing1.jpg",
+      link: "/services/plumbing",
     title: "Plumbing Solutions",
     alt: "Plumbing technician",
   },
   {
     image:
-      "https://media.istockphoto.com/id/540205010/photo/condensing-boiler-gas-in-the-boiler-room.jpg?s=612x612&w=0&k=20&c=Mz3h7x_aZGRpY-nKqRhwFz_f6rkItm90Xo_CveGLTBA=",
-    link: "/services/heating",
+      "https://plus.unsplash.com/premium_photo-1661921394349-9e3f394d80da?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+      link: "/services/heating",
     title: "Heating Services",
     alt: "Heating worker",
   },
   {
     image:
-      "https://media.istockphoto.com/id/2213060072/photo/empty-commercial-kitchen-at-a-restaurant.jpg?s=612x612&w=0&k=20&c=E1_AEh8Ygk4Ra2zqYf3qitrY5FpVn1FcVBpmrOgL9_c=",
-    link: "/services/catering",
+      "https://plus.unsplash.com/premium_photo-1723823036427-b19e6d270bb6?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
+      link: "/services/catering",
     title: "Professional Catering",
     alt: "Catering service",
   },

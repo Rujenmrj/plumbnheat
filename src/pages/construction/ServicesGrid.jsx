@@ -64,7 +64,7 @@ export default function ServicesGrid() {
         "High-quality interior and exterior painting, decorating, and plastering with smooth, professional finishes.",
       color: "bg-secondary-500",
       image:
-        "https://media.istockphoto.com/id/2162013730/photo/the-worker-make-a-plasterboard-ceiling-he-does-taping-plaster-drywall-ceiling-joints-a-red.jpg?s=612x612&w=0&k=20&c=LfMxg2qLur3-Eke4gprOFxsxzOxkJd6DfLNxRiK2FQU=",
+        "https://plus.unsplash.com/premium_photo-1683121004450-ced102f8db0e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070",
       features: ["Interior & exterior", "Smooth plaster finishes", "Color consultation", "Durable coatings"],
     },
   ];

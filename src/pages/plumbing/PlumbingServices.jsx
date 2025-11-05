@@ -68,7 +68,7 @@ export default function PlumbingServices() {
         "Fast drain and sewer unblocking services. CCTV surveys and high-pressure jetting available.",
       color: "bg-primary-500",
       image:
-        "https://media.istockphoto.com/id/1249767977/photo/man-unblocking-sewage-drain-through-open-inspection-chamber-uk.jpg?s=612x612&w=0&k=20&c=CPcT4vZFwFTnxULea_Bc2V5r7ZHbJpaDWbxuYHPtAqY=",
+        "/plumbing/drain.jpg",
       features: [
         "Blocked drains",
         "CCTV surveys",
@@ -83,7 +83,7 @@ export default function PlumbingServices() {
         "All toilet repairs and installations. From simple fixes to complete toilet replacements.",
       color: "bg-secondary-500",
       image:
-        "https://media.istockphoto.com/id/1696692510/photo/plumber-repairing-a-toilet-cistern.jpg?s=612x612&w=0&k=20&c=_QnoY_AeokQ1bTZ9f1uJqFcq-0nGhmVtjUcezmQTj5g=",
+        "/plumbing/toilet.jpg",
       features: [
         "Running toilets",
         "Cistern repairs",
