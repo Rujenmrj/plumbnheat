@@ -128,28 +128,28 @@ const useScrollAnimation = (threshold = 0.2) => {
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&h=500&fit=crop",
+      "/construction1.jpeg",
     link: "/services/construction",
     title: "Construction Services",
     alt: "Construction worker",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=500&fit=crop",
+      "https://media.istockphoto.com/id/2223571943/photo/plumbing-installation-in-residential-construction-project-near-completion-in-basement-area.webp?a=1&b=1&s=612x612&w=0&k=20&c=pMRlErF91oInd3qjWnKjCdRthJdqdydPV0gTsdvDcNE=",
     link: "/services/plumbing",
     title: "Plumbing Solutions",
     alt: "Plumbing technician",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=500&fit=crop",
+      "https://media.istockphoto.com/id/540205010/photo/condensing-boiler-gas-in-the-boiler-room.jpg?s=612x612&w=0&k=20&c=Mz3h7x_aZGRpY-nKqRhwFz_f6rkItm90Xo_CveGLTBA=",
     link: "/services/heating",
     title: "Heating Services",
     alt: "Heating worker",
   },
   {
     image:
-      "https://plus.unsplash.com/premium_photo-1673830185789-0c4c165c71e7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1193",
+      "https://media.istockphoto.com/id/2213060072/photo/empty-commercial-kitchen-at-a-restaurant.jpg?s=612x612&w=0&k=20&c=E1_AEh8Ygk4Ra2zqYf3qitrY5FpVn1FcVBpmrOgL9_c=",
     link: "/services/catering",
     title: "Professional Catering",
     alt: "Catering service",
