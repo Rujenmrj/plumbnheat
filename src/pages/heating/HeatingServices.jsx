@@ -23,7 +23,7 @@ export default function HeatingServices() {
         "Expert installation of new boilers from leading brands. Energy-efficient models with extended warranties and professional fitting.",
       color: "bg-secondary-500",
       image:
-        "https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80",
+        "/heating/install.jpg",
       features: [
         "All major brands",
         "10-year warranty",
