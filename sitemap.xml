@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Home Page -->
+  <url>
+    <loc>https://weplumbnheat.co.uk/</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://weplumbnheat.co.uk/about</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Services Page -->
+  <url>
+    <loc>https://weplumbnheat.co.uk/services</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://weplumbnheat.co.uk/contact</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Optional: Other key service pages -->
+  <url>
+    <loc>https://weplumbnheat.co.uk/services/plumbing</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weplumbnheat.co.uk/services/heating</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weplumbnheat.co.uk/services/catering</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://weplumbnheat.co.uk/services/construction</loc>
+    <lastmod>2025-11-08</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+
